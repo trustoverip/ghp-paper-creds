@@ -1,0 +1,21 @@
+{
+  "@context": "https://example.com/example-context.json",
+  "type": [ "VerifiableCredential", "GHPVaccinationCertificate" ],
+  "linkedVaccineCertificate": "VAX383469956",
+  "birthDate": "1972-10-17",
+  "givenName": "Rodney",
+  "middleName": "Milburn",
+  "familyName": "Dangerfield",
+  "medicinalProductName": "1",
+  "cvxCode": "1",
+  "marketingAuthorizationHolder": "1",
+  "doseNumber": "1",
+  "dosesPerCycle": "2",
+  "dateOfVaccination": "2021-08-04",
+  "stateOfVaccination": "1",
+  "countryOfVaccination": "0",
+  "disease": "1",
+  "vaccineDescription": "0",
+  "vaccineType": "1",
+  "certificateNumber": "URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
+}

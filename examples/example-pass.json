@@ -1,0 +1,9 @@
+{
+  "@context": "https://example.com/example-context.json",
+  "type": [ "VerifiableCredential", "GoodHealthPass" ],
+  "birthDate": "1972-10-17",
+  "givenName": "Rodney",
+  "middleName": "Milburn",
+  "familyName": "Dangerfield",
+  "status": true
+}

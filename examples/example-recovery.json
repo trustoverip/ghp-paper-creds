@@ -1,0 +1,16 @@
+{
+  "@context": "https://example.com/example-context.json",
+  "type": [ "VerifiableCredential", "GHPAntigenTestCredential" ],
+  "linkedTestCertificate": "PGR39264009",
+  "birthDate": "1972-10-17",
+  "givenName": "Rodney",
+  "middleName": "Milburn",
+  "familyName": "Dangerfield",
+  "dateOfFirstPositiveResult": "2020-11-23",
+  "stateOfTest": "26",
+  "countryOfTest": "7",
+  "disease": "1",
+  "certificateValidFrom": "2021-08-02",
+  "certificateValidTo": "2021-08-09",
+  "certificateNumber": "URN:UVCI:01:US:78543092A86FDS3SD5612DBV673FG943#C"
+}
