@@ -1,0 +1,21 @@
+{
+  "@context": "https://example.com/example-context.json",
+  "type": [ "VerifiableCredential", "GHPCitizenRecoveryCredential" ],
+  "linkedTestCertificate": "PGR39264009",
+  "birthDate": "1972-10-17",
+  "givenName": "Rodney",
+  "middleName": "Milburn",
+  "familyName": "Dangerfield",
+  "testCommercialName": "2",
+  "testManufacturer": "1",
+  "dateOfSample": "2021-08-02T01:08:03z",
+  "dateOfResult": "2021-08-02T01:08:02z",
+  "testResult": "5",
+  "testingCentre": "Joseph Walker Williams Community Center",
+  "stateOfTest": "26",
+  "countryOfTest": "7",
+  "disease": "0",
+  "testDescription": "1",
+  "testType": "94",
+  "certificateNumber": "URN:UVCI:01:US:10807843F94AEE0EE5093FBC254BD813#B"
+}
