@@ -24,32 +24,28 @@ const jsonxtTemplate = require ('./cache/templates/ghp.json');
 
 // This is the ceritifcate data. 
 const demoVaccineCertificate = {
-  "@context": "https://www.demo.com/context/v1",
-  type: [ "GHPVaccinationCertificate" ],
-  GHPEventRecipient: {
-    type: [ "GHPEventRecipient" ],
+  type: [ 'GHPVaccinationCertificate' ],
+  recipient: {
+    type: [ 'GHPEventRecipient' ],
     birthDate: "1972-10-17",
     givenName: "RODNEY",
-    familyName: "DANGERFIELD",
+    familyName: "DANGERFIELD"
   },
-  GHPVaccinationCertificate: {
-    type: [ "GHPVaccinationCertificate" ],
-    medicinalProductName: "1",
-    marketingAuthorizationHolder: "1",
-    doseNumber: "1",
-    seriesDoses: "2",
-    dateOfVaccination: "2021-08-04",
-    stateOfVaccination: "MA",
-    countryOfVaccination: "US",
-    disease: "1",
-    vaccineDescription: "0",
-    vaccineType: "1"
-  }
+  medicinalProductName: "1",
+  marketingAuthorizationHolder: "1",
+  doseNumber: "1",
+  dosesPerCycle: "2",
+  dateOfVaccination: "2021-08-04",
+  stateOfVaccination: "MA",
+  countryOfVaccination: "US",
+  disease: "1",
+  vaccineDescription: "0",
+  vaccineType: "1"
 }
 
 // This is the W3C VC enclosure
 const vc = {
-  '@context': ['https://www.w3.org/2018/credentials/v1'],
+  '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.demo.com/context/v1"],
   type: ['VerifiableCredential'],
   issuer: 'did:web:demo.com:DemoController',
   issuanceDate: '2021-05-18T16:06:06Z',
