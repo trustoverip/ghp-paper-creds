@@ -34,7 +34,7 @@ const demoVaccineCertificate = {
   medicinalProductName: "1",
   marketingAuthorizationHolder: "1",
   doseNumber: "1",
-  seriesDoses: "2",
+  dosesPerCycle: "2",
   dateOfVaccination: "2021-08-04",
   stateOfVaccination: "MA",
   countryOfVaccination: "US",

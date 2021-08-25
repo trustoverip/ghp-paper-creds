@@ -105,7 +105,7 @@
     "doseNumber": {
      "@id": "http://hl7.org/fhir/ca/baseline/Immunization.protocolApplied.doseNumber"
     }, 
-    "seriesDoses": {
+    "dosesPerCycle": {
       "@id": "https://hl7.org/fhir/immunization-definitions.html#Immunization.protocolApplied.seriesDoses_x_"
      }, 
     "healthProfessional": {
@@ -149,6 +149,9 @@
     "doseNumber": {
      "@id": "http://hl7.org/fhir/ca/baseline/Immunization.protocolApplied.doseNumber"
     }, 
+    "dosesPerCycle": {
+      "@id": "https://hl7.org/fhir/immunization-definitions.html#Immunization.protocolApplied.seriesDoses_x_"
+     }, 
     "linkedVaccinationCertificate": {
      "@id": "http://schema.org/identifier"
     }, 
