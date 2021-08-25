@@ -8,7 +8,7 @@
       {"path": "credentialSubject.medicinalProductName", "encoder": "string"},
       {"path": "credentialSubject.marketingAuthorizationHolder", "encoder": "string"},
       {"path": "credentialSubject.doseNumber", "encoder": "string"},
-      {"path": "credentialSubject.seriesDoses", "encoder": "string"},
+      {"path": "credentialSubject.dosesPerCycle", "encoder": "string"},
       {"path": "credentialSubject.dateOfVaccination", "encoder": "string"},
       {"path": "credentialSubject.stateOfVaccination", "encoder": "string"},
       {"path": "credentialSubject.countryOfVaccination", "encoder": "string"},
