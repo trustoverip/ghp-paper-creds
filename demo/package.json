@@ -1,0 +1,22 @@
+{
+  "name": "ghp-paper-creds-demo",
+  "version": "0.0.1",
+  "description": "Simple Demo for Good Health Pass W3C Vaccination Credentials with JSON-XT",
+  "scripts": {
+    "demo": "node src/demo.js"
+  },
+  "author": "Vitor Pamplona",
+  "license": "GPL-3.0-only",
+  "files": [
+    "src/**/*.js",
+    "scripts/**/*.js"
+  ],
+  "main": "lib/index.js",
+  "dependencies": {
+    "@digitalbazaar/ed25519-signature-2020": "^2.1.0",
+    "@digitalbazaar/ed25519-verification-key-2020": "^2.1.1",
+    "@digitalbazaar/vc": "^1.0.0",
+    "ed25519-signature-2020-context": "^1.1.0",
+    "jsonxt": "^0.0.17"
+  }
+}
