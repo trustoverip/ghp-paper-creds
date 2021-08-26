@@ -1,0 +1,71 @@
+{
+  "type": "spec/overlay/label/1.0",
+  "capture_base": "hl:zQmX1WK6WGopkp8aRZnyEejtAWTTbTwp2Bm91TcgPAJCZ7Y",
+  "language": "fr-FR",
+  "attr_labels": {
+    "linkedVaccineCertificate": "Identifiant du certificat de vaccination lié",
+    "givenName": "Prénom",
+    "middleName": "deuxième prénom",
+    "familyName": "Nom de famille",
+    "birthDate": "Date de naissance de la personne",
+    "disease": "Classification des maladies",
+    "vaccineDescription": "Description du vaccin",
+    "vaccineType": "Type de vaccin",
+    "medicinalProductName": "Médicament vaccinal",
+    "marketingAuthorizationHolder": "Titulaire de l'autorisation du service marketing",
+    "doseNumber": "Nombre de dose administrée dans un cycle",
+    "dosesPerCycle": "Nombre de doses attendues pour un cycle complet",
+    "dateOfVaccination": "Date de vaccination",
+    "countryOfVaccination": "Pays de vaccination",
+    "certificateNumber": "Identifiant du certificat"
+  },
+  "attr_categories": [
+    "_cat-1_",
+    "_cat-2_",
+    "_cat-2-1_",
+    "_cat-3_",
+    "_cat-3-1_",
+    "_cat-3-2_",
+    "_cat-4_"
+  ],
+  "cat_labels": {
+    "_cat-1_": "Personnel/Opérationnel",
+    "_cat-2_": "Identification de la personne",
+    "_cat-2-1_": "Nom d'une personne",
+    "_cat-3_": "Informations sur la vaccination/prophylaxie",
+    "_cat-3-1_": "Maladie ou agent ciblé",
+    "_cat-3-2_": "Vaccin/prophylaxie",
+    "_cat-4_": "Métadonnées du certificat"
+  },
+  "cat_attributes": {
+    "_cat-1_": [
+      "linkedVaccineCertificate"
+    ],
+    "_cat-2-1_": [
+      "givenName",
+      "middleName",
+      "familyName"
+    ],
+    "_cat-2_": [
+      "birthDate"
+    ],
+    "_cat-3-1_": [
+      "disease"
+    ],
+    "_cat-3-2_": [
+      "vaccineDescription",
+      "vaccineType"
+    ],
+    "_cat-3_": [
+      "medicinalProductName",
+      "marketingAuthorizationHolder",
+      "doseNumber",
+      "dosesPerCycle",
+      "dateOfVaccination",
+      "countryOfVaccination"
+    ],
+    "_cat-4_": [
+      "certificateNumber"
+    ]
+  }
+}

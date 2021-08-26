@@ -20,27 +20,32 @@
 
 const { signAndPack, unpackAndVerify } = require ('./credential');
 const privateKey = require ('./cache/keys/private-key.json');
-const jsonxtTemplate = require ('./cache/templates/ghp.json'); 
+const jsonxtTemplate = require ('./cache/templates/ghp.json');
 
-// This is the ceritifcate data. 
+// This is the ceritifcate data.
 const demoVaccineCertificate = {
   type: [ 'GHPVaccinationCertificate' ],
   recipient: {
     type: [ 'GHPEventRecipient' ],
-    birthDate: "1972-10-17",
-    givenName: "RODNEY",
-    familyName: "DANGERFIELD"
+    birthDate:"1972-10-17",
+    givenName:"Rodney",
+    middleName:"Milburn",
+    familyName:"Dangerfield",
   },
-  medicinalProductName: "1",
-  marketingAuthorizationHolder: "1",
-  doseNumber: 1,
-  dosesPerCycle: 2,
-  dateOfVaccination: "2021-08-04",
-  stateOfVaccination: "MA",
-  countryOfVaccination: "US",
-  disease: "1",
-  vaccineDescription: "0",
-  vaccineType: "1"
+  linkedVaccineCertificate:"VAX383469956",
+
+  medicinalProductName:"1",
+  cvxCode:"1",
+  marketingAuthorizationHolder:"1",
+  doseNumber:1,
+  dosesPerCycle:2,
+  dateOfVaccination:"2021-08-04",
+  stateOfVaccination:"MA",
+  countryOfVaccination:"US",
+  disease:"1",
+  vaccineDescription:"0",
+  vaccineType:"1",
+  certificateNumber:"URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
 }
 
 // This is the W3C VC enclosure
@@ -49,7 +54,12 @@ const vc = {
   type: ['VerifiableCredential'],
   issuer: 'did:web:demo.com:DemoController',
   issuanceDate: '2021-05-18T16:06:06Z',
-  credentialSubject: demoVaccineCertificate
+  credentialSchema: {
+    id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+    type: "OCASchemaValidator"
+  },
+  credentialSubject: demoVaccineCertificate,
+
 }
 
 

@@ -1,0 +1,24 @@
+{
+  "type": "spec/overlay/information/1.0",
+  "capture_base": "hl:zQmX1WK6WGopkp8aRZnyEejtAWTTbTwp2Bm91TcgPAJCZ7Y",
+  "language": "es-US",
+  "attr_information": {
+    "linkedVaccineCertificate": "Identificador único del certificado de vacunación asociado",
+    "givenName": "El nombre legal del destinatario",
+    "middleName": "El segundo nombre legal del destinatario",
+    "familyName": "El apellido legal del destinatario",
+    "birthDate": "Fecha de nacimiento del destinatario. Obligatorio si no se proporciona un número de documento de identificación.",
+    "disease": "Enfermedad o agente contra el que la vacuna protege",
+    "vaccineDescription": "Descripción genérica de la vacuna/profilaxis",
+    "vaccineType": "Descripción genérica de la vacuna / profilaxis o sus componentes [vacunas covid-19 J07BX03]",
+    "medicinalProductName": "Nombre del medicamento",
+    "cvxCode": "Código CVX (solo en Norteamérica)",
+    "marketingAuthorizationHolder": "Titular de la autorización de comercialización",
+    "doseNumber": "Número de dosis administradas en un ciclo",
+    "dosesPerCycle": "Número de dosis esperadas para un ciclo completo (específico para una persona en el momento de la administración)",
+    "dateOfVaccination": "La fecha en que ocurrió el evento de vacunación (o se pretendía que ocurriera)",
+    "stateOfVaccination": "El estado en el que se ha vacunado a la persona.",
+    "countryOfVaccination": "El país en el que se ha vacunado a la persona.",
+    "certificateNumber": "Identificador único del certificado (UVCI), que se imprimirá (legible por humanos) en el certificado; el identificador único se puede incluir en el IIS"
+  }
+}
