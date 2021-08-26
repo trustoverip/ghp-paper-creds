@@ -58,8 +58,7 @@ const vc = {
     id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
     type: "OCASchemaValidator"
   },
-  credentialSubject: demoVaccineCertificate,
-
+  credentialSubject: demoVaccineCertificate
 }
 
 
