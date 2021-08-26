@@ -1,0 +1,71 @@
+{
+  "type": "spec/overlay/label/1.0",
+  "capture_base": "hl:zQmX1WK6WGopkp8aRZnyEejtAWTTbTwp2Bm91TcgPAJCZ7Y",
+  "language": "es-US",
+  "attr_labels": {
+    "linkedVaccineCertificate": "ID del certificado de vacunación vinculado",
+    "givenName": "Nombre",
+    "middleName": "Segundo nombre",
+    "familyName": "Apellido",
+    "birthDate": "Fecha de nacimiento de la persona",
+    "disease": "Clasificación de la enfermedad",
+    "vaccineDescription": "Descripción de la vacuna",
+    "vaccineType": "Tipo de vacuna",
+    "medicinalProductName": "Medicamento de vacuna",
+    "cvxCode": "Código CVX",
+    "marketingAuthorizationHolder": "Titular de la autorización de comercialización",
+    "doseNumber": "Número de dosis administradas en un ciclo",
+    "dosesPerCycle": "Número de dosis esperadas para un ciclo completo",
+    "dateOfVaccination": "Fecha de vacunación",
+    "stateOfVaccination": "Estado de vacunación",
+    "countryOfVaccination": "País de vacunación",
+    "certificateNumber": "Identificador de certificado"
+  },
+  "attr_categories": [
+    "_cat-1_",
+    "_cat-2_",
+    "_cat-2-1_",
+    "_cat-3_",
+    "_cat-3-1_",
+    "_cat-4_"
+  ],
+  "cat_labels": {
+    "_cat-1_": "Personal/Operacional",
+    "_cat-2_": "Identificación de la persona",
+    "_cat-2-1_": "Nombre de la persona",
+    "_cat-3_": "Información sobre vacunación/profilaxis",
+    "_cat-3-1_": "Enfermedad o agente objetivo",
+    "_cat-4_": "Metadatos de certificado"
+  },
+  "cat_attributes": {
+    "_cat-1_": [
+      "linkedVaccineCertificate"
+    ],
+    "_cat-2-1_": [
+      "givenName",
+      "middleName",
+      "familyName"
+    ],
+    "_cat-2_": [
+      "birthDate"
+    ],
+    "_cat-3-1_": [
+      "disease",
+      "vaccineDescription",
+      "vaccineType"
+    ],
+    "_cat-3_": [
+      "medicinalProductName",
+      "cvxCode",
+      "marketingAuthorizationHolder",
+      "doseNumber",
+      "dosesPerCycle",
+      "dateOfVaccination",
+      "stateOfVaccination",
+      "countryOfVaccination"
+    ],
+    "_cat-4_": [
+      "certificateNumber"
+    ]
+  }
+}

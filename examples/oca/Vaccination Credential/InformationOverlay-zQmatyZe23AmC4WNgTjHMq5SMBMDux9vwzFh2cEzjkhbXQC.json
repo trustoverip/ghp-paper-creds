@@ -1,0 +1,22 @@
+{
+  "type": "spec/overlay/information/1.0",
+  "capture_base": "hl:zQmX1WK6WGopkp8aRZnyEejtAWTTbTwp2Bm91TcgPAJCZ7Y",
+  "language": "fr-FR",
+  "attr_information": {
+    "linkedVaccineCertificate": "Identifiant unique du certificat de vaccination associé",
+    "givenName": "Le prénom légal du destinataire",
+    "middleName": "Le (s) deuxième (s) prénom (s) légal du destinataire",
+    "familyName": "Le nom légal du destinataire",
+    "birthDate": "Date de naissance du bénéficiaire. Obligatoire si aucun numéro de document d'identification n'est fourni.",
+    "disease": "Maladie ou agent contre lequel la vaccination offre une protection",
+    "vaccineDescription": "Description générique du vaccin/de la prophylaxie",
+    "vaccineType": "Description générique du vaccin/prophylaxie ou de ses composants [J07BX03 vaccins covid-19]",
+    "medicinalProductName": "Nom du médicament",
+    "marketingAuthorizationHolder": "Titulaire de l'autorisation du service marketing",
+    "doseNumber": "Nombre de dose administrée dans un cycle",
+    "dosesPerCycle": "Nombre de doses attendues pour un cycle complet (spécifique à une personne au moment de l'administration)",
+    "dateOfVaccination": "La date à laquelle l'événement de vaccination s'est produit (ou était censé se produire)",
+    "countryOfVaccination": "Le pays dans lequel l'individu a été vacciné",
+    "certificateNumber": "Identifiant unique du certificat (UVCI), à imprimer (lisible par l'homme) dans le certificat; l'identifiant unique peut être inclus dans l'IIS"
+  }
+}

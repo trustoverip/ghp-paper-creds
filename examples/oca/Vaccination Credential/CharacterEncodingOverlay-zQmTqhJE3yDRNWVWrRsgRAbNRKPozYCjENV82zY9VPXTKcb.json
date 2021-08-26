@@ -1,0 +1,24 @@
+{
+  "type": "spec/overlay/character_encoding/1.0",
+  "capture_base": "hl:zQmX1WK6WGopkp8aRZnyEejtAWTTbTwp2Bm91TcgPAJCZ7Y",
+  "default_character_encoding": "utf-8",
+  "attr_character_encoding": {
+    "linkedVaccineCertificate": "utf-8",
+    "givenName": "utf-8",
+    "middleName": "utf-8",
+    "familyName": "utf-8",
+    "birthDate": "utf-8",
+    "disease": "utf-8",
+    "vaccineDescription": "utf-8",
+    "vaccineType": "utf-8",
+    "medicinalProductName": "utf-8",
+    "cvxCode": "utf-8",
+    "marketingAuthorizationHolder": "utf-8",
+    "doseNumber": "utf-8",
+    "dosesPerCycle": "utf-8",
+    "dateOfVaccination": "utf-8",
+    "stateOfVaccination": "utf-8",
+    "countryOfVaccination": "utf-8",
+    "certificateNumber": "utf-8"
+  }
+}

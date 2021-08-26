@@ -1,0 +1,12 @@
+{
+  "type": "spec/overlay/format/1.0",
+  "capture_base": "hl:zQmX1WK6WGopkp8aRZnyEejtAWTTbTwp2Bm91TcgPAJCZ7Y",
+  "attr_formats": {
+    "birthDate": "YYYY-MM-DD",
+    "disease": "SNOMED CT",
+    "vaccineDescription": "SNOMED CT",
+    "vaccineType": "SNOMED CT",
+    "dateOfVaccination": "YYYY-MM-DD",
+    "countryOfVaccination": "ISO 3166-1 alpha-2"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "type": "spec/overlay/label/1.0",
+  "capture_base": "hl:zQmX1WK6WGopkp8aRZnyEejtAWTTbTwp2Bm91TcgPAJCZ7Y",
+  "language": "en-US",
+  "attr_labels": {
+    "linkedVaccineCertificate": "Linked vaccination certificate ID",
+    "givenName": "First name",
+    "middleName": "Middle name(s)",
+    "familyName": "Last name",
+    "birthDate": "Person date of birth",
+    "disease": "Classification of Disease",
+    "vaccineDescription": "Vaccine description",
+    "vaccineType": "Vaccine type",
+    "medicinalProductName": "Vaccine medicinal product",
+    "cvxCode": "CVX code",
+    "marketingAuthorizationHolder": "Marketing Authorisation Holder",
+    "doseNumber": "Number of dose administered in a cycle",
+    "dosesPerCycle": "Number of expected doses for a complete cycle",
+    "dateOfVaccination": "Date of vaccination",
+    "stateOfVaccination": "State of vaccination",
+    "countryOfVaccination": "Country of vaccination",
+    "certificateNumber": "Certificate Identifier"
+  },
+  "attr_categories": [
+    "_cat-1_",
+    "_cat-2_",
+    "_cat-2-1_",
+    "_cat-3_",
+    "_cat-3-1_",
+    "_cat-3-2_",
+    "_cat-4_"
+  ],
+  "cat_labels": {
+    "_cat-1_": "Personal/Operational",
+    "_cat-2_": "Person identification",
+    "_cat-2-1_": "Person name",
+    "_cat-3_": "Vaccination/prophylaxis information",
+    "_cat-3-1_": "Disease or agent targeted",
+    "_cat-3-2_": "Vaccine/prophylaxis",
+    "_cat-4_": "Certificate metadata"
+  },
+  "cat_attributes": {
+    "_cat-1_": [
+      "linkedVaccineCertificate"
+    ],
+    "_cat-2-1_": [
+      "givenName",
+      "middleName",
+      "familyName"
+    ],
+    "_cat-2_": [
+      "birthDate"
+    ],
+    "_cat-3-1_": [
+      "disease"
+    ],
+    "_cat-3-2_": [
+      "vaccineDescription",
+      "vaccineType"
+    ],
+    "_cat-3_": [
+      "medicinalProductName",
+      "cvxCode",
+      "marketingAuthorizationHolder",
+      "doseNumber",
+      "dosesPerCycle",
+      "dateOfVaccination",
+      "stateOfVaccination",
+      "countryOfVaccination"
+    ],
+    "_cat-4_": [
+      "certificateNumber"
+    ]
+  }
+}
