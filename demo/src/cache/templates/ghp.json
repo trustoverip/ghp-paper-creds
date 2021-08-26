@@ -1,21 +1,28 @@
 {
   "ghp-vaccination:1": {
     "columns": [
-      {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
       {"path": "credentialSubject.recipient.givenName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.middleName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
+      
       {"path": "credentialSubject.recipient.birthDate", "encoder": "isodate-1900-base32"},
 
       {"path": "credentialSubject.medicinalProductName", "encoder": "string"},
       {"path": "credentialSubject.marketingAuthorizationHolder", "encoder": "string"},
       {"path": "credentialSubject.doseNumber", "encoder": "integer-base32"},
       {"path": "credentialSubject.dosesPerCycle", "encoder": "integer-base32"},
-      {"path": "credentialSubject.dateOfVaccination", "encoder": "string"},
+      {"path": "credentialSubject.dateOfVaccination", "encoder": "isodate-1900-base32"},
       {"path": "credentialSubject.stateOfVaccination", "encoder": "string"},
       {"path": "credentialSubject.countryOfVaccination", "encoder": "string"},
       {"path": "credentialSubject.disease", "encoder": "string"},
       {"path": "credentialSubject.vaccineDescription", "encoder": "string"},
       {"path": "credentialSubject.vaccineType", "encoder": "string"},
       {"path": "credentialSubject.certificateNumber", "encoder": "string"},
+      {"path": "credentialSubject.linkedVaccineCertificate", "encoder": "string"},
+      {"path": "credentialSubject.cvxCode", "encoder": "string"},
+
+      {"path": "credentialSchema.id", "encoder": "string"},
+      {"path": "credentialSchema.type", "encoder": "string"},
 
       {"path": "issuanceDate", "encoder": "isodatetime-epoch-base32"},
       {"path": "expirationDate", "encoder": "isodatetime-epoch-base32"},
