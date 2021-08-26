@@ -4,7 +4,7 @@
       {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
       {"path": "credentialSubject.recipient.givenName", "encoder": "string"},
       {"path": "credentialSubject.recipient.birthDate", "encoder": "isodate-1900-base32"},
-      
+
       {"path": "credentialSubject.medicinalProductName", "encoder": "string"},
       {"path": "credentialSubject.marketingAuthorizationHolder", "encoder": "string"},
       {"path": "credentialSubject.doseNumber", "encoder": "integer-base32"},
@@ -15,7 +15,8 @@
       {"path": "credentialSubject.disease", "encoder": "string"},
       {"path": "credentialSubject.vaccineDescription", "encoder": "string"},
       {"path": "credentialSubject.vaccineType", "encoder": "string"},
-      
+      {"path": "credentialSubject.certificateNumber", "encoder": "string"},
+
       {"path": "issuanceDate", "encoder": "isodatetime-epoch-base32"},
       {"path": "expirationDate", "encoder": "isodatetime-epoch-base32"},
       {"path": "issuer", "encoder": "string"},
