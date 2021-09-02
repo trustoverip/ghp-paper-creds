@@ -42,7 +42,7 @@ const demoVaccineCertificate = {
   dateOfVaccination:"2021-08-04",
   stateOfVaccination:"CA-AB",
   countryOfVaccination:"CA",
-  disease:"RA01:COVID-19",
+  disease:"RA01",
   vaccineType:"XM0GQ8",
   certificateNumber:"URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
 }
