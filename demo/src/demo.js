@@ -51,15 +51,14 @@ const demoVaccineCertificate = {
 const vc = {
   '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.goodhealthpass.org/context/v1"],
   type: ['VerifiableCredential'],
-  issuer: 'did:web:demo.com:DemoController',
-  issuanceDate: '2021-05-18T16:06:06Z',
+  issuer: 'did:web:demo.com:DemoController',                     // Issuer's Controller for the KeyPair
+  issuanceDate: new Date().toISOString().replace(/....Z$/, "Z"), // Resolution of seconds to avoid creating a unique indentifier  
   credentialSchema: {
-    id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+    id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",          // Fixes the OCA Schema version used to issue this credential. 
     type: "OCASchemaValidator"
   },
   credentialSubject: demoVaccineCertificate
 }
-
 
 console.log("Preparing to Sign: \n");
 console.log(vc);
