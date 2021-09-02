@@ -34,17 +34,16 @@ const demoVaccineCertificate = {
   },
   linkedVaccineCertificate:"VAX383469956",
 
-  medicinalProductName:"1",
-  cvxCode:"1",
-  marketingAuthorizationHolder:"1",
+  medicinalProductName:"28571000087109",
+  cvxCode:"207",
+  marketingAuthorizationHolder:"MOD",
   doseNumber:1,
   dosesPerCycle:2,
   dateOfVaccination:"2021-08-04",
-  stateOfVaccination:"MA",
-  countryOfVaccination:"US",
-  disease:"1",
-  vaccineDescription:"0",
-  vaccineType:"1",
+  stateOfVaccination:"CA-AB",
+  countryOfVaccination:"CA",
+  disease:"RA01:COVID-19",
+  vaccineType:"XM0GQ8",
   certificateNumber:"URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
 }
 
