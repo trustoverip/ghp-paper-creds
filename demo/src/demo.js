@@ -49,7 +49,7 @@ const demoVaccineCertificate = {
 
 // This is the W3C VC enclosure
 const vc = {
-  '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.demo.com/context/v1"],
+  '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.goodhealthpass.org/context/v1"],
   type: ['VerifiableCredential'],
   issuer: 'did:web:demo.com:DemoController',
   issuanceDate: '2021-05-18T16:06:06Z',
