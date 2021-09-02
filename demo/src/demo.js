@@ -28,9 +28,9 @@ const demoVaccineCertificate = {
   recipient: {
     type: [ 'GHPEventRecipient' ],
     birthDate:"1972-10-17",
-    givenName:"Rodney",
-    middleName:"Milburn",
-    familyName:"Dangerfield",
+    givenName:"RODNEY",
+    middleName:"MILBURN",
+    familyName:"DANGERFIELD",
   },
   linkedVaccineCertificate:"VAX383469956",
 
@@ -51,7 +51,7 @@ const demoVaccineCertificate = {
 const vc = {
   '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.goodhealthpass.org/context/v1"],
   type: ['VerifiableCredential'],
-  issuer: 'did:web:demo.com:DemoController',                     // Issuer's Controller for the KeyPair
+  issuer: 'did:web:DEMO.COM:CONTROLLER',                     // Issuer's Controller for the KeyPair
   issuanceDate: new Date().toISOString().replace(/....Z$/, "Z"), // Resolution of seconds to avoid creating a unique indentifier  
   credentialSchema: {
     id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",          // Fixes the OCA Schema version used to issue this credential. 
@@ -65,7 +65,7 @@ console.log(vc);
 console.log("");
 
 // Signing and Generating QR
-signAndPack(vc, privateKey, 'demo.com', 'ghp-vaccination', '1', jsonxtTemplate).then(uri => {
+signAndPack(vc, privateKey, 'demo.com', 'vax', '1', jsonxtTemplate).then(uri => {
   console.log("Generated QR is: \n");
   console.log(uri);
   console.log("");
