@@ -34,7 +34,7 @@ var contexts = {
   "https://w3id.org/security/suites/ed25519-2020/v1": W3CED25519Context,
   "https://www.goodhealthpass.org/context/v1": GHPContext,
 
-  "did:web:demo.com:DemoController#DemoKeyName": DemoPublicKey
+  "did:web:DEMO.COM:CONTROLLER#KEY": DemoPublicKey
 };
 
 /*

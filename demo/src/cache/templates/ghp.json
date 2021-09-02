@@ -1,36 +1,31 @@
 {
-  "ghp-vaccination:1": {
+  "vax:1": {
     "columns": [
       {"path": "credentialSubject.recipient.givenName", "encoder": "string"},
       {"path": "credentialSubject.recipient.middleName", "encoder": "string"},
       {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
-      
       {"path": "credentialSubject.recipient.birthDate", "encoder": "isodate-1900-base32"},
 
-      {"path": "credentialSubject.medicinalProductName", "encoder": "string"},
-      {"path": "credentialSubject.marketingAuthorizationHolder", "encoder": "string"},
+      {"path": "credentialSubject.medicinalProductName", "encoder": "string", "compact":["28581000087106", "28571000087109", "28761000087108", "28951000087107"] },
+      {"path": "credentialSubject.marketingAuthorizationHolder", "encoder": "string", "compact": ["MOD", "PFR", "ASZ", "JSN"]},
       {"path": "credentialSubject.doseNumber", "encoder": "integer-base32"},
       {"path": "credentialSubject.dosesPerCycle", "encoder": "integer-base32"},
       {"path": "credentialSubject.dateOfVaccination", "encoder": "isodate-1900-base32"},
       {"path": "credentialSubject.stateOfVaccination", "encoder": "string"},
       {"path": "credentialSubject.countryOfVaccination", "encoder": "string"},
-      {"path": "credentialSubject.disease", "encoder": "string"},
-      {"path": "credentialSubject.vaccineDescription", "encoder": "string"},
-      {"path": "credentialSubject.vaccineType", "encoder": "string"},
-      {"path": "credentialSubject.certificateNumber", "encoder": "string"},
+      {"path": "credentialSubject.disease", "encoder": "string", "compact": ["RA01"]},
+      {"path": "credentialSubject.vaccineType", "encoder": "string", "compact": ["XM68M6", "XM1NL1", "XM5DF6", "XM9QW8", "XM0CX4", "XM5JC5", "XM1J92", "XM6AT1", "XM0GQ8"]},
+      {"path": "credentialSubject.certificateNumber", "encoder": "string", "prefix": ["URN:UVCI:"]},
       {"path": "credentialSubject.linkedVaccineCertificate", "encoder": "string"},
-      {"path": "credentialSubject.cvxCode", "encoder": "string"},
-
-      {"path": "credentialSchema.id", "encoder": "string"},
-      {"path": "credentialSchema.type", "encoder": "string"},
+      {"path": "credentialSubject.cvxCode", "encoder": "string", "compact": ["207", "208", "210", "212"]},
 
       {"path": "issuanceDate", "encoder": "isodatetime-epoch-base32"},
       {"path": "expirationDate", "encoder": "isodatetime-epoch-base32"},
-      {"path": "issuer", "encoder": "string"},
+      {"path": "issuer", "encoder": "string", "prefix": ["did:web:"]},
       {"path": "id", "encoder": "string"},
 
       {"path": "proof.created", "encoder": "isodatetime-epoch-base32"},
-      {"path": "proof.verificationMethod", "encoder": "string"},
+      {"path": "proof.verificationMethod", "encoder": "string", "prefix": ["did:web:"]},
       {"path": "proof.proofValue", "encoder": "multibase-base36"}
     ],
     "template": {
@@ -42,6 +37,10 @@
       "type": [
         "VerifiableCredential"
       ],
+      "credentialSchema": {
+        "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+        "type": "OCASchemaValidator"
+      },
       "credentialSubject": {
         "type": [ "GHPVaccinationCertificate" ],
         "recipient": {
