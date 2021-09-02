@@ -11,7 +11,7 @@
   "dateOfFirstPositiveResult": "2020-11-23",
   "stateOfTest": "CA-AB",
   "countryOfTest": "CA",
-  "disease": "RA01:COVID-19",
+  "disease": "RA01",
   "certificateValidFrom": "2021-08-02",
   "certificateValidTo": "2021-08-09",
   "certificateNumber": "URN:UVCI:01:US:78543092A86FDS3SD5612DBV673FG943#C"
