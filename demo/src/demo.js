@@ -34,33 +34,31 @@ const demoVaccineCertificate = {
   },
   linkedVaccineCertificate:"VAX383469956",
 
-  medicinalProductName:"1",
-  cvxCode:"1",
-  marketingAuthorizationHolder:"1",
+  medicinalProductName:"28571000087109",
+  cvxCode:"207",
+  marketingAuthorizationHolder:"MOD",
   doseNumber:1,
   dosesPerCycle:2,
   dateOfVaccination:"2021-08-04",
-  stateOfVaccination:"MA",
-  countryOfVaccination:"US",
-  disease:"1",
-  vaccineDescription:"0",
-  vaccineType:"1",
+  stateOfVaccination:"CA-AB",
+  countryOfVaccination:"CA",
+  disease:"RA01:COVID-19",
+  vaccineType:"XM0GQ8",
   certificateNumber:"URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
 }
 
 // This is the W3C VC enclosure
 const vc = {
-  '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.demo.com/context/v1"],
+  '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.goodhealthpass.org/context/v1"],
   type: ['VerifiableCredential'],
-  issuer: 'did:web:demo.com:DemoController',
-  issuanceDate: '2021-05-18T16:06:06Z',
+  issuer: 'did:web:demo.com:DemoController',                     // Issuer's Controller for the KeyPair
+  issuanceDate: new Date().toISOString().replace(/....Z$/, "Z"), // Resolution of seconds to avoid creating a unique indentifier  
   credentialSchema: {
-    id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+    id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",          // Fixes the OCA Schema version used to issue this credential. 
     type: "OCASchemaValidator"
   },
   credentialSubject: demoVaccineCertificate
 }
-
 
 console.log("Preparing to Sign: \n");
 console.log(vc);
