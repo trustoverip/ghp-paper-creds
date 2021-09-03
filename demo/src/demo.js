@@ -22,6 +22,7 @@ const { signAndPack, unpackAndVerify } = require ('./credential');
 const privateKey = require ('./cache/keys/private-key.json');
 const jsonxtTemplate = require ('./cache/templates/ghp.json');
 
+const qrcode = require("qrcode")
 const path = require("path")
 const fs = require("fs")
 
@@ -37,6 +38,11 @@ const at = {
     string: [
         "credential",
         "date",
+        "issuer",
+        "resolver",
+        "type",
+        "version",
+        "qrcode",
     ],
     default: {
         "credential": path.join(path.dirname(__filename), "../../examples/example-vaccination.json"),
@@ -74,6 +80,8 @@ Options:
 --resolver <host>            JSONXT resolver (default: ${at.default.resolver})
 --type <type>                JSONXT type (default: ${at.default.type})
 --version <version>          JSONXT version (default: ${at.default.version})
+
+--qrcode <file.png>          file to write QR code (no default)
 `)
 
     process.exit(message ? 1 : 0)
@@ -106,10 +114,16 @@ const main = async (ad) => {
     console.log("");
 
     // Signing and Generating QR
-    signAndPack(vc, privateKey, ad.resolver, ad.type, ad.version, jsonxtTemplate).then(uri => {
+    signAndPack(vc, privateKey, ad.resolver, ad.type, ad.version, jsonxtTemplate).then(async uri => {
       console.log(`Generated QR (${uri.length} bytes) is:\n`);
       console.log(uri);
       console.log("");
+
+      if (ad.qrcode) {
+        await qrcode.toFile(ad.qrcode, uri, {
+            errorCorrectionLevel: "Q",
+        })
+      }
 
       // Unpacking QR and Verifying
       unpackAndVerify(uri, jsonxtTemplate).then(vc => {
