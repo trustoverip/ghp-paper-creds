@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.goodhealthpass.org/context/v1"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "issuer": "DID:WEB:DEMO.COM:CONTROLLER",
+  "issuanceDate": "2021-09-03T14:58:13Z",
+  "credentialSchema": {
+    "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+    "type": "OCASchemaValidator"
+  },
+  "credentialSubject": {
+    "type": [
+      "GoodHealthPass"
+    ],
+    "recipient": {
+      "type": [
+        "GHPEventRecipient"
+      ],
+      "birthDate": "1972-10-17",
+      "givenName": "Rodney",
+      "middleName": "Milburn",
+      "familyName": "Dangerfield"
+    },
+    "status": true
+  }
+}
