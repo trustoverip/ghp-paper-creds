@@ -42,7 +42,10 @@ const at = {
         "resolver",
         "type",
         "version",
+
         "qrcode",
+        "url",
+        "vc",
     ],
     default: {
         "credential": path.join(path.dirname(__filename), "../../examples/example-vaccination.json"),
@@ -81,7 +84,11 @@ Options:
 --type <type>                JSONXT type (default: ${at.default.type})
 --version <version>          JSONXT version (default: ${at.default.version})
 
---qrcode <file.png>          file to write QR code (no default)
+Writing options:
+
+--qrcode <file.png>          file to write QR code to
+--url <file.txt>             file to write JSONXT URL to
+--vc <file.json>             file to write signed VC to
 `)
 
     process.exit(message ? 1 : 0)
@@ -119,6 +126,12 @@ const main = async (ad) => {
       console.log(uri);
       console.log("");
 
+      if (ad.url) {
+        await fs.promises.writeFile(ad.url, uri)
+      }
+      if (ad.vc) {
+        await fs.promises.writeFile(ad.vc, JSON.stringify(vc, null, 2))
+      }
       if (ad.qrcode) {
         await qrcode.toFile(ad.qrcode, uri, {
             errorCorrectionLevel: "Q",

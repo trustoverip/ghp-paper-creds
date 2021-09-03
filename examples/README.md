@@ -1,7 +1,11 @@
 
+# Example JSON files
+
+
 
 # Vaccine Credential Canadian OCA Schema 
 
+```
 | **CB: Classification** | **CB: Attribute Name**       | **CB: Attribute Type** | **CB: Flagged Attribute** | **OL: Character Encoding** | **OL: Format**         | **OL: Entry Codes**                                                           |
 | ---------------------- | ---------------------------- | ---------------------- | ------------------------- | -------------------------- | ---------------------- | ----------------------------------------------------------------------------- |
 |                        | givenName                    | Text                   | Y                         | utf-8                      |                        |                                                                               |
@@ -111,4 +115,4 @@
 | countryOfVaccination         | CA:Canada (le)                                                                                                                                                                                                                                                                                                                                                                                         |
 | certificateNumber            |    
 
-                                                                                                                                                                                                                                                                                                                                                                                                    |
+```
