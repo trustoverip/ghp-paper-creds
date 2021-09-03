@@ -22,59 +22,106 @@ const { signAndPack, unpackAndVerify } = require ('./credential');
 const privateKey = require ('./cache/keys/private-key.json');
 const jsonxtTemplate = require ('./cache/templates/ghp.json');
 
-// This is the ceritifcate data.
-const demoVaccineCertificate = {
-  type: [ 'GHPVaccinationCertificate' ],
-  recipient: {
-    type: [ 'GHPEventRecipient' ],
-    birthDate:"1972-10-17",
-    givenName:"RODNEY",
-    middleName:"MILBURN",
-    familyName:"DANGERFIELD",
-  },
-  linkedVaccineCertificate:"VAX383469956",
+const path = require("path")
+const fs = require("fs")
 
-  medicinalProductName:"28571000087109",
-  cvxCode:"207",
-  marketingAuthorizationHolder:"MOD",
-  doseNumber:1,
-  dosesPerCycle:2,
-  dateOfVaccination:"2021-08-04",
-  stateOfVaccination:"CA-AB",
-  countryOfVaccination:"CA",
-  disease:"RA01",
-  vaccineType:"XM0GQ8",
-  certificateNumber:"URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
+const isodatetime = date => 
+    (date ? new Date(date) : new Date()).toISOString().replace(/....Z$/, "Z") // Resolution of seconds to avoid creating a unique indentifier  
+
+const minimist = require("minimist")
+const at = {
+    boolean: [
+        "verbose", 
+        "help",
+    ],
+    string: [
+        "credential",
+        "date",
+    ],
+    default: {
+        "credential": path.join(path.dirname(__filename), "../../examples/example-vaccination.json"),
+        "date": null,
+        "issuer": 'DID:WEB:DEMO.COM:CONTROLLER',                     // Issuer's Controller for the KeyPair
+        "resolver": "demo.com",
+        "type": "vax",
+        "version": "1",
+    },
+}
+const ad = minimist(process.argv.slice(2), at)
+
+const help = message => {
+    const name = "demo"
+
+    if (message) {
+        console.log(`${name}: ${message}`)
+        console.log()
+    }
+
+    console.log(`
+usage: ${name} [options] 
+
+Demonstrate signing and validating GoodHealthPass 
+W3C Verifiable Credentials.
+
+This will run with no command line arguments, but
+you can parameterize it somewhat to play with it.
+
+Options:
+
+--credential <file.json>     file with JSON credential
+--date <date>
+--issuer <issuer>            VC issuer (default: ${at.default.issuer})
+--resolver <host>            JSONXT resolver (default: ${at.default.resolver})
+--type <type>                JSONXT type (default: ${at.default.type})
+--version <version>          JSONXT version (default: ${at.default.version})
+`)
+
+    process.exit(message ? 1 : 0)
 }
 
-// This is the W3C VC enclosure
-const vc = {
-  '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.goodhealthpass.org/context/v1"],
-  type: ['VerifiableCredential'],
-  issuer: 'did:web:DEMO.COM:CONTROLLER',                     // Issuer's Controller for the KeyPair
-  issuanceDate: new Date().toISOString().replace(/....Z$/, "Z"), // Resolution of seconds to avoid creating a unique indentifier  
-  credentialSchema: {
-    id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",          // Fixes the OCA Schema version used to issue this credential. 
-    type: "OCASchemaValidator"
-  },
-  credentialSubject: demoVaccineCertificate
+if (ad.help) {
+    help()
+} else if (!ad.credential) {
+    help("--credential <data.json> required")
 }
 
-console.log("Preparing to Sign: \n");
-console.log(vc);
-console.log("");
+const main = async (ad) => {
+    const demoVaccineCertificate = JSON.parse(await fs.promises.readFile(ad.credential, "utf-8"))
 
-// Signing and Generating QR
-signAndPack(vc, privateKey, 'demo.com', 'vax', '1', jsonxtTemplate).then(uri => {
-  console.log("Generated QR is: \n");
-  console.log(uri);
-  console.log("");
+    // This is the W3C VC enclosure
+    const vc = {
+      '@context': ['https://www.w3.org/2018/credentials/v1', "https://www.goodhealthpass.org/context/v1"],
+      type: ['VerifiableCredential'],
+      issuer: ad.issuer,                     // Issuer's Controller for the KeyPair
+      issuanceDate: isodatetime(ad.date), 
+      credentialSchema: {
+        id: "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",          // Fixes the OCA Schema version used to issue this credential. 
+        type: "OCASchemaValidator"
+      },
+      credentialSubject: demoVaccineCertificate,
+    }
 
-  // Unpacking QR and Verifying
-  unpackAndVerify(uri, jsonxtTemplate).then(vc => {
-    console.log("Unpacked and verified to: \n");
-    console.log(vc);
+    console.log("Preparing to Sign: \n");
+    console.log(JSON.stringify(vc, null, 2))
     console.log("");
-  });
-});
 
+    // Signing and Generating QR
+    signAndPack(vc, privateKey, ad.resolver, ad.type, ad.version, jsonxtTemplate).then(uri => {
+      console.log(`Generated QR (${uri.length} bytes) is:\n`);
+      console.log(uri);
+      console.log("");
+
+      // Unpacking QR and Verifying
+      unpackAndVerify(uri, jsonxtTemplate).then(vc => {
+        console.log("Unpacked and verified to: \n");
+        console.log(JSON.stringify(vc, null, 2))
+        console.log("");
+      });
+    });
+}
+
+try {
+    main(ad)
+} catch (x) {
+    console.log(x)
+}
