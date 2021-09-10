@@ -7,14 +7,14 @@
     "VerifiableCredential"
   ],
   "issuer": "DID:WEB:DEMO.COM:CONTROLLER",
-  "issuanceDate": "2021-09-10T20:20:00Z",
+  "issuanceDate": "2021-09-10T20:19:58Z",
   "credentialSchema": {
     "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
     "type": "OCASchemaValidator"
   },
   "credentialSubject": {
     "type": [
-      "GHPVaccinationCredential"
+      "GHPAntigenTestCredential"
     ],
     "recipient": {
       "type": [
@@ -25,17 +25,17 @@
       "middleName": "Milburn",
       "familyName": "Dangerfield"
     },
-    "linkedVaccineCertificate": "VAX383469956",
-    "medicinalProductName": "28571000087109",
-    "cvxCode": "207",
-    "marketingAuthorizationHolder": "MOD",
-    "doseNumber": 1,
-    "dosesPerCycle": 2,
-    "dateOfVaccination": "2021-08-04",
-    "stateOfVaccination": "CA-AB",
-    "countryOfVaccination": "CA",
+    "linkedTestCertificate": "PGR39264009",
     "disease": "RA01",
-    "vaccineType": "XM0GQ8",
-    "certificateNumber": "URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
+    "testType": "LP6464-4",
+    "testCommercialName": "GLN-8800075500014/M22MD100M",
+    "testManufacturer": "GLN-8800075500014",
+    "dateOfSample": "2021-08-02T01:08:03Z",
+    "dateOfResult": "2021-08-02T01:08:02Z",
+    "testResult": "260415000",
+    "testingCentre": "Joseph Walker Williams Community Center",
+    "stateOfTest": "CA-AB",
+    "countryOfTest": "CA",
+    "certificateNumber": "URN:UVCI:01:US:10807843F94AEE0EE5093FBC254BD813#B"
   }
 }
