@@ -18,7 +18,7 @@
  *  limitations under the License.
  */
 
-const { signAndPack, unpackAndVerify } = require ('./credential');
+const { signAndPack, unpackAndVerify, unpack } = require ('./credential');
 const privateKey = require ('./cache/keys/private-key.json');
 const jsonxtTemplate = require ('./cache/templates/ghp.json');
 
@@ -140,9 +140,17 @@ const main = async (ad) => {
 
       // Unpacking QR and Verifying
       unpackAndVerify(uri, jsonxtTemplate).then(vc => {
-        console.log("Unpacked and verified to: \n");
-        console.log(JSON.stringify(vc, null, 2))
-        console.log("");
+        if (vc) {
+          console.log("Unpacked and verified to: \n");
+          console.log(JSON.stringify(vc, null, 2))
+          console.log("");
+        } else { 
+          unpack(uri, jsonxtTemplate).then(vc => {
+            console.log("Unable to Verify: \n");
+            console.log(JSON.stringify(vc, null, 2))
+            console.log("");
+          });
+        }
       });
     });
 }
