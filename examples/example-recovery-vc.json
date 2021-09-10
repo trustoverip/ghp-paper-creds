@@ -1,13 +1,12 @@
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://www.goodhealthpass.org/context/v1"
+    "https://www.goodhealthpass.org/context/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
   ],
   "type": [
     "VerifiableCredential"
   ],
-  "issuer": "DID:WEB:DEMO.COM:CONTROLLER",
-  "issuanceDate": "2021-09-10T20:19:59Z",
   "credentialSchema": {
     "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
     "type": "OCASchemaValidator"
@@ -20,18 +19,27 @@
       "type": [
         "GHPEventRecipient"
       ],
-      "birthDate": "1972-10-17",
       "givenName": "Rodney",
       "middleName": "Milburn",
-      "familyName": "Dangerfield"
+      "familyName": "Dangerfield",
+      "birthDate": "1972-10-17"
     },
-    "linkedTestCertificate": "PGR39264009",
-    "dateOfFirstPositiveResult": "2020-11-23",
-    "stateOfTest": "CA-AB",
-    "countryOfTest": "CA",
     "disease": "RA01",
+    "dateOfFirstPositiveResult": "2020-11-23",
     "certificateValidFrom": "2021-08-02",
     "certificateValidTo": "2021-08-09",
-    "certificateNumber": "URN:UVCI:01:US:78543092A86FDS3SD5612DBV673FG943#C"
-  }
+    "stateOfTest": "CA-AB",
+    "countryOfTest": "CA",
+    "certificateNumber": "URN:UVCI:01:US:78543092A86FDS3SD5612DBV673FG943#C",
+    "linkedTestCertificate": "PGR39264009"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "proofPurpose": "assertionMethod",
+    "created": "2021-09-10T20:29:53Z",
+    "verificationMethod": "did:web:DEMO.COM:CONTROLLER#KEY",
+    "proofValue": "z2s8RAcNyqNTWdcxdGGwTCG8CLY3AS7uvRTU8y2bVqHbLEKRKm3F772HafG2T3aF99zMjqcwnmoQoQfAk4niEecKF"
+  },
+  "issuanceDate": "2021-09-10T20:29:53Z",
+  "issuer": "DID:WEB:DEMO.COM:CONTROLLER"
 }
