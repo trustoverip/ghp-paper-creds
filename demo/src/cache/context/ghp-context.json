@@ -36,7 +36,7 @@
     "testType": {
      "@id": "https://fhir.infoway-inforoute.ca/ValueSet/antigencode#840536004"
     },
-    "testingCenter": {
+    "testingCentre": {
      "@id": "http://www.gs1.org/gln"
     }
    },
