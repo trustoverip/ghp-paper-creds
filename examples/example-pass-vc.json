@@ -24,15 +24,15 @@
       "familyName": "Dangerfield",
       "birthDate": "1972-10-17"
     },
-    "status": "true"
+    "status": true
   },
   "proof": {
     "type": "Ed25519Signature2020",
     "proofPurpose": "assertionMethod",
-    "created": "2021-09-10T20:29:54Z",
+    "created": "2021-09-10T21:25:52Z",
     "verificationMethod": "did:web:DEMO.COM:CONTROLLER#KEY",
-    "proofValue": "z3wp5tNjspQzRc92s8JNrmUzU1ikpWfu6qoVAm22z4EaftCbnQR6rgvGDwz9Y9md7FVmrjmrZhvdYUt9nJWtmwgjv"
+    "proofValue": "z3XH1nN27HRep9xkHCnhKD1tAPJJ1mG89W7gyNny3dWxRqerszXPDQB762qAwzGSjzDLDXGB6gFXvoNH4xg9VVoYe"
   },
-  "issuanceDate": "2021-09-10T20:29:54Z",
+  "issuanceDate": "2021-09-10T21:25:52Z",
   "issuer": "DID:WEB:DEMO.COM:CONTROLLER"
 }
