@@ -1,5 +1,5 @@
 {
-  "type": [ "GHPVaccinationCertificate" ],
+  "type": [ "GHPVaccinationCredential" ],
   "recipient": {
     "type": [ "GHPEventRecipient" ],
     "birthDate": "1972-10-17",
