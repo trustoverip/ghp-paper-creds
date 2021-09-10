@@ -27,9 +27,6 @@
     "testCommercialName": {
      "@id": "https://www.cdc.gov/csels/dls/sars-cov-2-livd-codes.html"
     },
-    "testDescription": {
-     "@id": "https://www.cdc.gov/csels/dls/sars-cov-2-livd-codes.html"
-    },
     "testManufacturer": {
      "@id": "https://www.cdc.gov/csels/dls/sars-cov-2-livd-codes.html"
     },
