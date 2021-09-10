@@ -40,10 +40,10 @@
   "proof": {
     "type": "Ed25519Signature2020",
     "proofPurpose": "assertionMethod",
-    "created": "2021-09-10T20:29:54Z",
+    "created": "2021-09-10T21:25:52Z",
     "verificationMethod": "did:web:DEMO.COM:CONTROLLER#KEY",
-    "proofValue": "z41d2FMixMoakM2B59E8dV3RsNps1J9i9mKRVP9gFkpCz7NKXt9oeYVe7d2SnbPoFYea7oC9BTbyDZSd62TEXFJZy"
+    "proofValue": "z5iRmSQaLuHqHtC2kT1AcPvTEXEBa8GNiqadoUZgmGQH89mPswdQPLtbrXNPY1djA7kDkWZKwSuGJJoRam6hMrjkw"
   },
-  "issuanceDate": "2021-09-10T20:29:54Z",
+  "issuanceDate": "2021-09-10T21:25:52Z",
   "issuer": "DID:WEB:DEMO.COM:CONTROLLER"
 }
