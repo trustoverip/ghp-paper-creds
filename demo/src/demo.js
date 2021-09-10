@@ -51,9 +51,7 @@ const at = {
         "credential": path.join(path.dirname(__filename), "../../examples/example-vaccination.json"),
         "date": null,
         "issuer": 'DID:WEB:DEMO.COM:CONTROLLER',                     // Issuer's Controller for the KeyPair
-        "resolver": "demo.com",
-        "type": "vax",
-        "version": "1",
+        "resolver": "demo.com"
     },
 }
 const ad = minimist(process.argv.slice(2), at)
@@ -100,8 +98,25 @@ if (ad.help) {
     help("--credential <data.json> required")
 }
 
+const findTemplateType = (templates, type) => {
+  let foundTemplate = undefined;
+  Object.entries(templates).forEach(([templateName, templateRoot]) => {
+    if (templateRoot.template.credentialSubject.type[0] === type[0]) {
+      foundTemplate = templateName;
+    }
+  }); 
+  if (foundTemplate) return foundTemplate;
+  console.error("Could not find JSONXT template for the credential type " + type)
+}
+
 const main = async (ad) => {
     const demoVaccineCertificate = JSON.parse(await fs.promises.readFile(ad.credential, "utf-8"))
+
+    if (!ad.type) {
+      template = findTemplateType(jsonxtTemplate, demoVaccineCertificate.type);
+      ad.type = template.split(":")[0];
+      ad.version = template.split(":")[1];
+    }
 
     // This is the W3C VC enclosure
     const vc = {
