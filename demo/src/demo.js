@@ -152,7 +152,9 @@ const main = async (ad) => {
         await fs.promises.writeFile(ad.uri, uri)
       }
       if (ad.vc) {
-        await fs.promises.writeFile(ad.vc, JSON.stringify(vc, null, 2))
+        unpack(uri, jsonxtTemplate).then(vc => {
+          fs.promises.writeFile(ad.vc, JSON.stringify(vc, null, 2))
+        });
       }
       if (ad.qrcode) {
         await qrcode.toFile(ad.qrcode, uri, {

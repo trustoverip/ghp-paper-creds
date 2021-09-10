@@ -1,13 +1,12 @@
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://www.goodhealthpass.org/context/v1"
+    "https://www.goodhealthpass.org/context/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
   ],
   "type": [
     "VerifiableCredential"
   ],
-  "issuer": "DID:WEB:DEMO.COM:CONTROLLER",
-  "issuanceDate": "2021-09-10T20:19:58Z",
   "credentialSchema": {
     "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
     "type": "OCASchemaValidator"
@@ -20,22 +19,31 @@
       "type": [
         "GHPEventRecipient"
       ],
-      "birthDate": "1972-10-17",
       "givenName": "Rodney",
       "middleName": "Milburn",
-      "familyName": "Dangerfield"
+      "familyName": "Dangerfield",
+      "birthDate": "1972-10-17"
     },
-    "linkedTestCertificate": "PGR39264009",
     "disease": "RA01",
     "testType": "LP6464-4",
     "testCommercialName": "GLN-8800075500014/M22MD100M",
     "testManufacturer": "GLN-8800075500014",
+    "testingCentre": "Joseph Walker Williams Community Center",
     "dateOfSample": "2021-08-02T01:08:03Z",
     "dateOfResult": "2021-08-02T01:08:02Z",
     "testResult": "260415000",
-    "testingCentre": "Joseph Walker Williams Community Center",
     "stateOfTest": "CA-AB",
     "countryOfTest": "CA",
-    "certificateNumber": "URN:UVCI:01:US:10807843F94AEE0EE5093FBC254BD813#B"
-  }
+    "certificateNumber": "URN:UVCI:01:US:10807843F94AEE0EE5093FBC254BD813#B",
+    "linkedTestCertificate": "PGR39264009"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "proofPurpose": "assertionMethod",
+    "created": "2021-09-10T20:29:53Z",
+    "verificationMethod": "did:web:DEMO.COM:CONTROLLER#KEY",
+    "proofValue": "z5uZGhJS8NmFF5YXRm2sPCWbDqo8YrMqLq2a6JpTZJBpQYPGbK5vNWfn17edN18bXDiCBdku5gngNvri1HLSr1QZb"
+  },
+  "issuanceDate": "2021-09-10T20:29:53Z",
+  "issuer": "DID:WEB:DEMO.COM:CONTROLLER"
 }
