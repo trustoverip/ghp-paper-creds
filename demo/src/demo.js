@@ -44,7 +44,7 @@ const at = {
         "version",
 
         "qrcode",
-        "url",
+        "uri",
         "vc",
     ],
     default: {
@@ -87,7 +87,7 @@ Options:
 Writing options:
 
 --qrcode <file.png>          file to write QR code to
---url <file.txt>             file to write JSONXT URL to
+--uri <file.txt>             file to write JSONXT URI to
 --vc <file.json>             file to write signed VC to
 `)
 
@@ -126,8 +126,8 @@ const main = async (ad) => {
       console.log(uri);
       console.log("");
 
-      if (ad.url) {
-        await fs.promises.writeFile(ad.url, uri)
+      if (ad.uri) {
+        await fs.promises.writeFile(ad.uri, uri)
       }
       if (ad.vc) {
         await fs.promises.writeFile(ad.vc, JSON.stringify(vc, null, 2))
