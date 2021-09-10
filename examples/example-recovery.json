@@ -1,5 +1,5 @@
 {
-  "type": [ "GHPAntigenTestCredential" ],
+  "type": [ "GHPCitizenRecoveryCredential" ],
   "recipient": {
     "type": [ "GHPEventRecipient" ],
     "birthDate": "1972-10-17",
