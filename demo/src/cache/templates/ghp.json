@@ -173,7 +173,7 @@
       {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
       {"path": "credentialSubject.recipient.birthDate", "encoder": "isodate-1900-base32"},
 
-      {"path": "credentialSubject.status", "encoder": "string"},
+      {"path": "credentialSubject.status", "encoder": "boolean"},
 
       {"path": "issuanceDate", "encoder": "isodatetime-epoch-base32"},
       {"path": "expirationDate", "encoder": "isodatetime-epoch-base32"},
