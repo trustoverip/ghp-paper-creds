@@ -48,6 +48,7 @@ const at = {
         "vc",
     ],
     default: {
+        "verbose": false,
         "credential": path.join(path.dirname(__filename), "../../examples/example-vaccination.json"),
         "date": null,
         "issuer": 'DID:WEB:DEMO.COM:CONTROLLER',                     // Issuer's Controller for the KeyPair
@@ -131,15 +132,21 @@ const main = async (ad) => {
       credentialSubject: demoVaccineCertificate,
     }
 
-    console.log("Preparing to Sign: \n");
-    console.log(JSON.stringify(vc, null, 2))
-    console.log("");
+    console.log("  Preparing to Sign");
+    if (ad.verbose) {
+      console.log("");
+      console.log(JSON.stringify(vc, null, 2))
+      console.log("");
+    }
 
     // Signing and Generating QR
     signAndPack(vc, privateKey, ad.resolver, ad.type, ad.version, jsonxtTemplate).then(async uri => {
-      console.log(`Generated QR (${uri.length} bytes) is:\n`);
-      console.log(uri);
-      console.log("");
+      console.log(`  Generated QR (${uri.length} bytes)`);
+      if (ad.verbose) {
+        console.log("");
+        console.log(uri);
+        console.log("");
+      }
 
       if (ad.uri) {
         await fs.promises.writeFile(ad.uri, uri)
@@ -156,12 +163,15 @@ const main = async (ad) => {
       // Unpacking QR and Verifying
       unpackAndVerify(uri, jsonxtTemplate).then(vc => {
         if (vc) {
-          console.log("Unpacked and verified to: \n");
-          console.log(JSON.stringify(vc, null, 2))
-          console.log("");
+          console.log("  Unpacked and verified");
+          if (ad.verbose) {
+            console.log("");
+            console.log(JSON.stringify(vc, null, 2))
+            console.log("");
+          }
         } else { 
           unpack(uri, jsonxtTemplate).then(vc => {
-            console.log("Unable to Verify: \n");
+            console.log("  Unable to Verify: \n");
             console.log(JSON.stringify(vc, null, 2))
             console.log("");
           });
