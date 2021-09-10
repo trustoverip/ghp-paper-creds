@@ -38,6 +38,9 @@
     },
     "testingCentre": {
      "@id": "http://www.gs1.org/gln"
+    }, 
+    "certificateNumber": {
+      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
     }
    },
    "@id": "https://w3id.org/ghp/ca#GHPAntigenTestCredential"
