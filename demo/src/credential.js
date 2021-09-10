@@ -103,3 +103,6 @@ const unpackAndVerify = async function unpackAndVerify(uri, fullTemplate) {
 
 exports.signAndPack = signAndPack;
 exports.unpackAndVerify = unpackAndVerify;
+
+exports.pack = pack;
+exports.unpack = unpack;
