@@ -64,6 +64,15 @@
     },
     "stateOfTest": {
      "@id": "http://hl7.org/fhir/ca/baseline/DiagnosticReport.location.address.state"
+    },
+    "certificateValidFrom": {
+      "@id": "http://hl7.org/fhir/ca/baseline/DiagnosticReport.result.effectivePeriod.start"
+     },
+    "certificateValidTo": {
+      "@id": "http://hl7.org/fhir/ca/baseline/DiagnosticReport.result.effectivePeriod.end"
+     }, 
+    "certificateNumber": {
+      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
     }
    },
    "@id": "https://w3id.org/ghp/ca#GHPCitizenRecoveryCredential"
