@@ -1,33 +1,30 @@
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
-    "https://www.goodhealthpass.org/context/v1"
+    "https://www.goodhealthpass.org/context/v1",
+    "https://w3id.org/security/suites/ed25519-2020/v1"
   ],
   "type": [
     "VerifiableCredential"
   ],
-  "issuer": "DID:WEB:DEMO.COM:CONTROLLER",
-  "issuanceDate": "2021-09-03T14:58:13Z",
   "credentialSchema": {
     "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
     "type": "OCASchemaValidator"
   },
   "credentialSubject": {
     "type": [
-      "GHPVaccinationCertificate"
+      "GHPVaccinationCredential"
     ],
     "recipient": {
       "type": [
         "GHPEventRecipient"
       ],
-      "birthDate": "1972-10-17",
       "givenName": "Rodney",
       "middleName": "Milburn",
-      "familyName": "Dangerfield"
+      "familyName": "Dangerfield",
+      "birthDate": "1972-10-17"
     },
-    "linkedVaccineCertificate": "VAX383469956",
     "medicinalProductName": "28571000087109",
-    "cvxCode": "207",
     "marketingAuthorizationHolder": "MOD",
     "doseNumber": 1,
     "dosesPerCycle": 2,
@@ -36,6 +33,17 @@
     "countryOfVaccination": "CA",
     "disease": "RA01",
     "vaccineType": "XM0GQ8",
-    "certificateNumber": "URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D"
-  }
+    "certificateNumber": "URN:UVCI:01:CA:67097896F94ADD0FF5093FBC875BE2396#D",
+    "linkedVaccineCertificate": "VAX383469956",
+    "cvxCode": "207"
+  },
+  "proof": {
+    "type": "Ed25519Signature2020",
+    "proofPurpose": "assertionMethod",
+    "created": "2021-09-10T21:25:52Z",
+    "verificationMethod": "did:web:DEMO.COM:CONTROLLER#KEY",
+    "proofValue": "z5iRmSQaLuHqHtC2kT1AcPvTEXEBa8GNiqadoUZgmGQH89mPswdQPLtbrXNPY1djA7kDkWZKwSuGJJoRam6hMrjkw"
+  },
+  "issuanceDate": "2021-09-10T21:25:52Z",
+  "issuer": "DID:WEB:DEMO.COM:CONTROLLER"
 }

@@ -42,7 +42,163 @@
         "type": "OCASchemaValidator"
       },
       "credentialSubject": {
-        "type": [ "GHPVaccinationCertificate" ],
+        "type": [ "GHPVaccinationCredential" ],
+        "recipient": {
+          "type": [ "GHPEventRecipient" ]
+        }
+      },
+      "proof": {
+        "type": "Ed25519Signature2020",
+        "proofPurpose": "assertionMethod"
+      }
+    }
+  }, 
+  "test:1": {
+    "columns": [
+      {"path": "credentialSubject.recipient.givenName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.middleName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.birthDate", "encoder": "isodate-1900-base32"},
+
+      {"path": "credentialSubject.disease", "encoder": "string", "compact": ["RA01"]},
+      {"path": "credentialSubject.testType", "encoder": "string", "compact": ["LP6464-4", "LP217198-3" ]},
+      
+      {"path": "credentialSubject.testCommercialName", "encoder": "string", "compact":
+        ["GLN-8800075500014/M22MD100M", "GLN-0811877010005/190-080", "GLN-0811877010005/191-000", "GLN-0813337010006/06R8601", "GLN-0813337010006/06R8610", "GLN-0813337010006/06R8620", "GLN-0813337010006/06R8630", "GLN-0813337010006/06R9001", "GLN-0813337010006/06R9010", "GLN-0813337010006/06R9020", "GLN-0813337010006/06R9030", "GLN-0884999000001/09N77-001", "GLN-0884999000001/09N77-010", "GLN-0884999000001/09N77-080", "GLN-0884999000001/09N77-085", "GLN-0884999000001/09N77-090", "GLN-0884999000001/09N77-095", "GLN-0884999000001/09N78-080", "GLN-0884999000001/09N78-090", "GLN-0884999000001/09N79-080", "GLN-0884999000001/09N79-090", "GLN-4051892000001/41FK10", "GLN-4051892000001/41FK11", "LEI-549300883RE115J3LD19/A03-51-322", "CRN-2354710/COV-W23M", "GLN-0382900000008/256082", "GLN-0382900000008/256089", "GLN-0382900000008/445003-01", "DUNS-962942756/MFG030018", "GLN-0851458005006/423744", "GLN-0851458005006/423748", "GLN-0815381020000/423738", "GLN-0860004739708/1000003", "GLN-0860004739708/1000012", "GLN-0860004739708/1000013", "GLN-0860004739708/1000018", "GLN-0860004739708/3000011", "GLN-0860004739708/3000150", "GLN-0860004739708/3000536", "GLN-0860004739708/3000555", "GLN-0860004739708/3000562", "GLN-0860004739708/3000563", "GLN-0860004739708/3000564", "GLN-0860004739708/3000567", "GLN-3015730200108/423720", "GLN-3610520000007/72710", "GLN-3610520000007/12013798", "DUNS-251005005/COV-13C25", "DUNS-956711444/XPCOV2/FLU/RSV-10", "DUNS-956711444/XPRSARS-COV2-10", "GLN-0810040820007/C0200", "GLN-0810040820007/C0201", "GLN-0810040820007/C1021-01", "GLN-0810040820007/C1021-03", "GLN-0810040820007/C1021-10", "GLN-0810040820007/C1021-100", "GLN-0810040820007/C2113", "GLN-0810040820007/CUE HEALTH APP", "CRN-103082/CAN-IGG-19", "CRN-103082/CAN-IGT-19", "GLN-0014613000005/M120", "GLN-0014613000005/M124", "GLN-0014613000005/M313", "DUNS-033429783/311460", "DUNS-033429783/311461", "GLN-0816101020003/MOL4150", "GLN-0816101020003/MOL4160", "GLN-0893230002001/KT-1032", "GLN-4049016000006/EI 2606-9601 G", "GLN-4049016000006/MP 2606-0100", "GLN-4049016000006/MP 2606-0125", "GLN-4049016000006/MP 2606-0200", "GLN-4049016000006/MP 2606-0225", "GLN-4049016000006/MP 2606-0425", "GLN-4049016000006/MP 2606-1000", "GLN-5453003370000/11416302 (FTD-114-96)", "DUNS-153623137/PRD-03546", "DUNS-153623137/PRD-04303", "DUNS-153623137/PRD-04304", "DUNS-153623137/PRD-04331", "DUNS-153623137/PRD-04332", "DUNS-153623137/PRD-04334", "DUNS-153623137/PRD-04335", "DUNS-153623137/PRD-06391", "DUNS-153623137/PRD-06404", "DUNS-153623137/PRD-06419", "DUNS-153623137/PRD-06420", "DUNS-153623137/PRD-06815", "DUNS-153623137/PRD-06816", "GLN-5060887160001/BCUBE 2.0", "GLN-5060887160001/BKTH-SCV2.02-32", "GLN-5060887160001/HYCT16.01", "GLN-5060887160001/HYCT36.01", "GLN-0816270020002/20026121", "GLN-0816270020002/20026930", "GLN-0816270020002/20026933", "GLN-0816270020002/20026934", "GLN-0816270020002/20043401", "GLN-0816270020002/20043434", "GLN-0816270020002/20043436", "GLN-0816270020002/20043439", "GLN-0816270020002/20043641", "GLN-0816270020002/20043645", "GLN-0816270020002/20043646", "GLN-0816270020002/20043647", "GLN-0816270020002/20043648", "DUNS-004006628/COV2-C", "DUNS-243942278/B25-CSER1001", "GLN-0850021628000/COV219", "GLN-0810055970001/00810055970056", "GLN-0840487100004/50-10047", "DUNS-255371916/I054C0463", "CRN-842762684/GCRNA-ADVISO-96R", "CRN-842762684/GCRNA-AUTOISO-96R", "CRN-842762684/GCRNA-COVID-96R", "CRN-842762684/QC-E32-EQP", "CRN-842762684/QC-Q16FL-PAC", "CRN-842762684/QC-Q16FLXL-PAC", "CRN-842762684/QC-Q96-EQP", "GLN-4065384000004/243001N-10", "GLN-4065384000004/243001N-10CA", "GLN-4065384000004/243001N-100CA", "GLN-4065384000004/243001N-20CA", "GLN-4065384000004/243001N-50CA", "CRN-330215000039151/XC25073", "LEI-549300ZZX9WCBZNYL849/619 9919", "LEI-549300ZZX9WCBZNYL849/619 9920", "LEI-549300ZZX9WCBZNYL849/619 9921", "LEI-549300ZZX9WCBZNYL849/619 9943", "LEI-549300ZZX9WCBZNYL849/619 9944", "LEI-549300ZZX9WCBZNYL849/619 9949", "LEI-549300ZZX9WCBZNYL849/619 9950", "GLN-0758750000008/619 9922", "GLN-0758750000008/619 9923", "GLN-0758750000008/619 9924", "GLN-0885502000006/IFMR-45", "GLN-8800047500011/ATPI04", "GLN-8800047500011/COV05", "GLN-4053228000006/691223", "GLN-4053228000006/9002813", "GLN-4053228000006/9002814", "GLN-4053228000006/9002824", "GLN-0014613000005/20374", "GLN-0014613000005/20377", "GLN-0014613000005/20378", "GLN-0014613000005/20380", "GLN-0014613000005/20391", "GLN-0014613000005/20398", "GLN-0014613000005/20399", "GLN-0014613000005/20402", "GLN-0812589020009/SARS-COV-2-PCR-CAN", "CRN-743768921/F000003", "CRN-743768921/F000004", "CRN-743768921/F000010", "CRN-743768921/F000011", "CRN-743768921/F000012", "CRN-743768921/W000003", "CRN-743768921/W000007", "GLN-4038377000008/09203079190", "GLN-4038377000008/09203095190", "GLN-4038377000008/09216928190", "GLN-4038377000008/09289267190", "GLN-4038377000008/09289275190", "GLN-4038377000008/09289291190", "GLN-4038377000008/09289313190", "GLN-0875197000009/09175431190", "GLN-0875197000009/09175440190", "GLN-0875197000009/09211101190", "GLN-0875197000009/09211128190", "GLN-0875197000009/09233474190", "GLN-0875197000009/09233482190", "GLN-0875197000009/09255427001", "GLN-0875197000009/09255478001", "GLN-0875197000009/09259848001", "GLN-0875197000009/09259856001", "GLN-0875197000009/09260935001", "GLN-0875197000009/09343733190", "GLN-0875197000009/09463526001", "GLN-0875197000009/09826009001", "GLN-0875197000009/09826017001", "GLN-0875197000009/09826041001", "GLN-0875197000009/09947060001", "GLN-0875197000009/09947078001", "DUNS-421167832/S3102E", "GLN-8800111700019/09COV31D", "GLN-8800111700019/09COV33D", "GLN-8800111700019/9901-C-NCOV-01G", "GLN-8800111700019/9901-NCOV-01G", "GLN-8800111700019/9901-NCOV-03G", "GLN-8800111700019/9901-NCOV-04G", "GLN-8800111700019/C-NCOV-01G", "GLN-8800111700019/Q-NCOV-01G", "GLN-8800069800014/SS-9030", "GLN-8800069800014/SS-9030COE", "GLN-8800069800014/SS-9030COM", "GLN-8800069800014/SS-9030CON", "GLN-8800069800014/SS-9030COP", "GLN-8800069800014/SS-9030COS", "GLN-8809240100011/RP10243X", "CRN-310115000888557/RR-0487-02-50", "CRN-310115000888557/RR-0487-02-200", "GLN-0842768000003/11206710", "GLN-0842768000003/11206711", "GLN-0842768000003/11206712", "GLN-0842768000003/11206713", "GLN-0842768000003/11206922", "GLN-0842768000003/11206923", "GLN-0842768000003/K7414", "GLN-0842768000003/KC813", "GLN-0842768000003/KC815", "GLN-0842768000003/RF812", "GLN-8809517360018/SQD52-K020", "GLN-8809517360018/SQD52-K100", "DUNS-243605917/ASM-0174", "DUNS-243605917/ASM-00144", "DUNS-243605917/ASM-00145", "DUNS-243605917/ASM-00146", "DUNS-243605917/ASM-00173", "DUNS-243605917/OTS-00233", "DUNS-243605917/OTS-00307", "GLN-0850000184008/A47814", "GLN-0850000184008/A47817", "GLN-0850000184008/A48002", "GLN-0850000184008/A48003", "GLN-0850000184008/A49869", "GLN-0850000184008/COVID-19 SOFTWARE V1.3", "GLN-0850000184008/COVID-19 SOFTWARE V2.3", "CRN-350200200037950/09167", "CRN-350200200037950/061254", "CRN-350200200037950/1N40C5", "CRN-350200200037950/1N40T0"] },
+      {"path": "credentialSubject.testManufacturer", "encoder": "string", "compact": ["GLN-8800075500014", "GLN-0811877010005", "GLN-0813337010006", "GLN-0884999000001", "GLN-4051892000001", "LEI-549300883RE115J3LD19", "CRN-2354710", "GLN-0382900000008", "DUNS-962942756", "GLN-0851458005006", "GLN-0815381020000", "GLN-0860004739708", "GLN-3015730200108", "GLN-3610520000007", "DUNS-251005005", "DUNS-956711444", "GLN-0810040820007", "CRN-103082", "GLN-0014613000005", "DUNS-033429783", "GLN-0816101020003", "GLN-0893230002001", "GLN-4049016000006", "GLN-5453003370000", "DUNS-153623137", "GLN-5060887160001", "GLN-0816270020002", "DUNS-004006628", "DUNS-243942278", "GLN-0850021628000", "GLN-0810055970001", "GLN-0840487100004", "DUNS-255371916", "CRN-842762684", "GLN-4065384000004", "CRN-330215000039151", "LEI-549300ZZX9WCBZNYL849", "GLN-0758750000008", "GLN-0885502000006", "GLN-8800047500011", "GLN-4053228000006", "GLN-0014613000005", "GLN-0812589020009", "CRN-743768921", "GLN-4038377000008", "GLN-0875197000009", "DUNS-421167832", "GLN-8800111700019", "GLN-8800069800014", "GLN-8809240100011", "CRN-310115000888557", "GLN-0842768000003", "GLN-8809517360018", "DUNS-243605917", "GLN-0850000184008", "CRN-350200200037950"]},
+      
+      {"path": "credentialSubject.testingCentre", "encoder": "string"},
+      
+      {"path": "credentialSubject.dateOfSample", "encoder": "isodatetime-epoch-base32"},
+      {"path": "credentialSubject.dateOfResult", "encoder": "isodatetime-epoch-base32"},
+      
+      {"path": "credentialSubject.testResult", "encoder": "string", "compact": ["260415000","260373001"]},
+      
+      {"path": "credentialSubject.stateOfTest", "encoder": "string"},
+      {"path": "credentialSubject.countryOfTest", "encoder": "string"},
+      
+      {"path": "credentialSubject.certificateNumber", "encoder": "string", "prefix": ["URN:UVCI:"]},
+      {"path": "credentialSubject.linkedTestCertificate", "encoder": "string"},
+
+      {"path": "issuanceDate", "encoder": "isodatetime-epoch-base32"},
+      {"path": "expirationDate", "encoder": "isodatetime-epoch-base32"},
+      {"path": "issuer", "encoder": "string", "prefix": ["did:web:"]},
+      {"path": "id", "encoder": "string"},
+
+      {"path": "proof.created", "encoder": "isodatetime-epoch-base32"},
+      {"path": "proof.verificationMethod", "encoder": "string", "prefix": ["did:web:"]},
+      {"path": "proof.proofValue", "encoder": "multibase-base36"}
+    ],
+    "template": {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.goodhealthpass.org/context/v1",
+        "https://w3id.org/security/suites/ed25519-2020/v1"
+      ],
+      "type": [
+        "VerifiableCredential"
+      ],
+      "credentialSchema": {
+        "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+        "type": "OCASchemaValidator"
+      },
+      "credentialSubject": {
+        "type": [ "GHPAntigenTestCredential" ],
+        "recipient": {
+          "type": [ "GHPEventRecipient" ]
+        }
+      },
+      "proof": {
+        "type": "Ed25519Signature2020",
+        "proofPurpose": "assertionMethod"
+      }
+    }
+  }, 
+  "recv:1": {
+    "columns": [
+      {"path": "credentialSubject.recipient.givenName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.middleName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.birthDate", "encoder": "isodate-1900-base32"},
+      
+      {"path": "credentialSubject.disease", "encoder": "string", "compact": ["RA01"]},
+      {"path": "credentialSubject.dateOfFirstPositiveResult", "encoder": "isodate-1900-base32"},
+      {"path": "credentialSubject.certificateValidFrom", "encoder": "isodate-1900-base32"},
+      {"path": "credentialSubject.certificateValidTo", "encoder": "isodate-1900-base32"},
+      
+      {"path": "credentialSubject.stateOfTest", "encoder": "string"},
+      {"path": "credentialSubject.countryOfTest", "encoder": "string"},
+      
+      {"path": "credentialSubject.certificateNumber", "encoder": "string", "prefix": ["URN:UVCI:"]},
+      {"path": "credentialSubject.linkedTestCertificate", "encoder": "string"},
+
+      {"path": "issuanceDate", "encoder": "isodatetime-epoch-base32"},
+      {"path": "expirationDate", "encoder": "isodatetime-epoch-base32"},
+      {"path": "issuer", "encoder": "string", "prefix": ["did:web:"]},
+      {"path": "id", "encoder": "string"},
+
+      {"path": "proof.created", "encoder": "isodatetime-epoch-base32"},
+      {"path": "proof.verificationMethod", "encoder": "string", "prefix": ["did:web:"]},
+      {"path": "proof.proofValue", "encoder": "multibase-base36"}
+    ],
+    "template": {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.goodhealthpass.org/context/v1",
+        "https://w3id.org/security/suites/ed25519-2020/v1"
+      ],
+      "type": [
+        "VerifiableCredential"
+      ],
+      "credentialSchema": {
+        "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+        "type": "OCASchemaValidator"
+      },
+      "credentialSubject": {
+        "type": [ "GHPCitizenRecoveryCredential" ],
+        "recipient": {
+          "type": [ "GHPEventRecipient" ]
+        }
+      },
+      "proof": {
+        "type": "Ed25519Signature2020",
+        "proofPurpose": "assertionMethod"
+      }
+    }
+  }, 
+  "pass:1": {
+    "columns": [
+      {"path": "credentialSubject.recipient.givenName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.middleName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.familyName", "encoder": "string"},
+      {"path": "credentialSubject.recipient.birthDate", "encoder": "isodate-1900-base32"},
+
+      {"path": "credentialSubject.status", "encoder": "boolean"},
+
+      {"path": "issuanceDate", "encoder": "isodatetime-epoch-base32"},
+      {"path": "expirationDate", "encoder": "isodatetime-epoch-base32"},
+      {"path": "issuer", "encoder": "string", "prefix": ["did:web:"]},
+      {"path": "id", "encoder": "string"},
+
+      {"path": "proof.created", "encoder": "isodatetime-epoch-base32"},
+      {"path": "proof.verificationMethod", "encoder": "string", "prefix": ["did:web:"]},
+      {"path": "proof.proofValue", "encoder": "multibase-base36"}
+    ],
+    "template": {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.goodhealthpass.org/context/v1",
+        "https://w3id.org/security/suites/ed25519-2020/v1"
+      ],
+      "type": [
+        "VerifiableCredential"
+      ],
+      "credentialSchema": {
+        "id": "7VhEMSUkXt8jnhgXKGkipDcoT6RTiESwAWKCKJV8rbpj",
+        "type": "OCASchemaValidator"
+      },
+      "credentialSubject": {
+        "type": [ "GoodHealthPass" ],
         "recipient": {
           "type": [ "GHPEventRecipient" ]
         }

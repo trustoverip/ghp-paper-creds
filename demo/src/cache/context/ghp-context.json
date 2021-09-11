@@ -27,9 +27,6 @@
     "testCommercialName": {
      "@id": "https://www.cdc.gov/csels/dls/sars-cov-2-livd-codes.html"
     },
-    "testDescription": {
-     "@id": "https://www.cdc.gov/csels/dls/sars-cov-2-livd-codes.html"
-    },
     "testManufacturer": {
      "@id": "https://www.cdc.gov/csels/dls/sars-cov-2-livd-codes.html"
     },
@@ -39,8 +36,11 @@
     "testType": {
      "@id": "https://fhir.infoway-inforoute.ca/ValueSet/antigencode#840536004"
     },
-    "testingCenter": {
+    "testingCentre": {
      "@id": "http://www.gs1.org/gln"
+    }, 
+    "certificateNumber": {
+      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
     }
    },
    "@id": "https://w3id.org/ghp/ca#GHPAntigenTestCredential"
@@ -64,6 +64,15 @@
     },
     "stateOfTest": {
      "@id": "http://hl7.org/fhir/ca/baseline/DiagnosticReport.location.address.state"
+    },
+    "certificateValidFrom": {
+      "@id": "http://hl7.org/fhir/ca/baseline/DiagnosticReport.result.effectivePeriod.start"
+     },
+    "certificateValidTo": {
+      "@id": "http://hl7.org/fhir/ca/baseline/DiagnosticReport.result.effectivePeriod.end"
+     }, 
+    "certificateNumber": {
+      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
     }
    },
    "@id": "https://w3id.org/ghp/ca#GHPCitizenRecoveryCredential"
@@ -85,72 +94,13 @@
    },
    "@id": "https://w3id.org/ghp/ca#GHPEventRecipient"
   },
-  "GHPVaccinationCertificate": {
+  "GHPVaccinationCredential": {
    "@context": {
-    "administeringCentre": {
-     "@id": "http://www.gs1.org/gln"
-    },
-    "batchNumber": {
-     "@id": "https://cvc.canimmunize.ca/v3/StructureDefinition/ca-cvc-lots"
-    },
     "countryOfVaccination": {
      "@id": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
     },
     "stateOfVaccination": {
       "@id": "http://hl7.org/fhir/ValueSet/usps-state"
-    },
-    "dateOfVaccination": {
-     "@id": "http://hl7.org/fhir/ca/baseline/Immunization.occurenceDateTime"
-    },
-    "disease": {
-     "@id": "http://snomed.info/sct/900000000000003001"
-    },
-    "doseNumber": {
-     "@id": "http://hl7.org/fhir/ca/baseline/Immunization.protocolApplied.doseNumber"
-    },
-    "dosesPerCycle": {
-      "@id": "https://hl7.org/fhir/immunization-definitions.html#Immunization.protocolApplied.seriesDoses_x_"
-     },
-    "healthProfessional": {
-     "@id": "https://cvc.canimmunize.ca/v3/ValueSet/HealthcareProviderRoleType"
-    },
-    "marketingAuthorizationHolder": {
-     "@id": "https://cvc.canimmunize.ca/v3/StructureDefinition/ca-cvc-market-authorization-holder"
-    },
-    "medicinalProductName": {
-     "@id": "https://cvc.canimmunize.ca/v3/Bundle/Tradename"
-    },
-    "nextVaccinationDate": {
-     "@id": "http://hl7.org/fhir/ca/baseline/ImmunizationRecommendation.dateCriterion.value"
-    },
-    "certificateNumber": {
-      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
-    },
-    "cvxCode": {
-      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
-    },
-    "linkedVaccineCertificate": {
-      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
-    },
-    "recipient": {
-     "@id": "https://w3id.org/ghp/ca#GHPEventRecipient"
-    },
-    "vaccine": {
-     "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
-    },
-    "vaccineDescription": {
-     "@id": "https://cvc.canimmunize.ca/v3/ValueSet/Generic"
-    },
-    "vaccineType": {
-     "@id": "http://snomed.info/sct/900000000000207008/version/20210131"
-    }
-   },
-   "@id": "https://w3id.org/ghp/ca#GHPVaccinationCertificate"
-  },
-  "GHPVaccinationCredential": {
-   "@context": {
-    "countryOfVaccination": {
-     "@id": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
     },
     "dateOfVaccination": {
      "@id": "https://cvc.canimmunize.ca/v3/Immunization.occurenceDateTime"
@@ -177,7 +127,19 @@
     },
     "recipient": {
      "@id": "https://w3id.org/ghp/ca#GHPEventRecipient"
-    }
+    },
+    "certificateNumber": {
+      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
+    }, 
+    "cvxCode": {
+      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
+    }, 
+    "linkedVaccineCertificate": {
+      "@id": "http://hl7.org/fhir/ca/baseline/ValueSet/vaccinecodes"
+    }, 
+    "vaccineType": {
+      "@id": "http://snomed.info/sct/900000000000207008/version/20210131"
+     } 
    },
    "@id": "https://w3id.org/ghp/ca#GHPVaccinationCredential"
   },

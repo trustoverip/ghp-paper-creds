@@ -9,6 +9,6 @@ do
     node demo.js \
         --credential $FOLDER/$file.json \
         --vc $FOLDER/$file-vc.json \
-        --url $FOLDER/$file-vc.txt \
+        --uri $FOLDER/$file-vc.txt \
         --qrcode $FOLDER/$file-vc.png
 done

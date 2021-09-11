@@ -13,7 +13,7 @@
   },
   "credentialSubject": {
     "type": [
-      "GoodHealthPass"
+      "GHPCitizenRecoveryCredential"
     ],
     "recipient": {
       "type": [
@@ -24,15 +24,22 @@
       "familyName": "Dangerfield",
       "birthDate": "1972-10-17"
     },
-    "status": true
+    "disease": "RA01",
+    "dateOfFirstPositiveResult": "2020-11-23",
+    "certificateValidFrom": "2021-08-02",
+    "certificateValidTo": "2021-08-09",
+    "stateOfTest": "CA-AB",
+    "countryOfTest": "CA",
+    "certificateNumber": "URN:UVCI:01:US:78543092A86FDS3SD5612DBV673FG943#C",
+    "linkedTestCertificate": "PGR39264009"
   },
   "proof": {
     "type": "Ed25519Signature2020",
     "proofPurpose": "assertionMethod",
-    "created": "2021-09-10T21:25:52Z",
+    "created": "2021-09-10T21:25:51Z",
     "verificationMethod": "did:web:DEMO.COM:CONTROLLER#KEY",
-    "proofValue": "z3XH1nN27HRep9xkHCnhKD1tAPJJ1mG89W7gyNny3dWxRqerszXPDQB762qAwzGSjzDLDXGB6gFXvoNH4xg9VVoYe"
+    "proofValue": "zGmqDPDet7ZA2H52tBoCZJJnCdzSnNoZDfzQHSgoSHSiMhZbwyyTosGecWn8fNXisCJkVkfRobv5SA5tCzphScxZ"
   },
-  "issuanceDate": "2021-09-10T21:25:52Z",
+  "issuanceDate": "2021-09-10T21:25:51Z",
   "issuer": "DID:WEB:DEMO.COM:CONTROLLER"
 }

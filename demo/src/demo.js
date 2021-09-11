@@ -18,7 +18,7 @@
  *  limitations under the License.
  */
 
-const { signAndPack, unpackAndVerify } = require ('./credential');
+const { signAndPack, unpackAndVerify, unpack } = require ('./credential');
 const privateKey = require ('./cache/keys/private-key.json');
 const jsonxtTemplate = require ('./cache/templates/ghp.json');
 
@@ -44,16 +44,15 @@ const at = {
         "version",
 
         "qrcode",
-        "url",
+        "uri",
         "vc",
     ],
     default: {
+        "verbose": false,
         "credential": path.join(path.dirname(__filename), "../../examples/example-vaccination.json"),
         "date": null,
         "issuer": 'DID:WEB:DEMO.COM:CONTROLLER',                     // Issuer's Controller for the KeyPair
-        "resolver": "demo.com",
-        "type": "vax",
-        "version": "1",
+        "resolver": "demo.com"
     },
 }
 const ad = minimist(process.argv.slice(2), at)
@@ -87,7 +86,7 @@ Options:
 Writing options:
 
 --qrcode <file.png>          file to write QR code to
---url <file.txt>             file to write JSONXT URL to
+--uri <file.txt>             file to write JSONXT URI to
 --vc <file.json>             file to write signed VC to
 `)
 
@@ -100,8 +99,25 @@ if (ad.help) {
     help("--credential <data.json> required")
 }
 
+const findTemplateType = (templates, type) => {
+  let foundTemplate = undefined;
+  Object.entries(templates).forEach(([templateName, templateRoot]) => {
+    if (templateRoot.template.credentialSubject.type[0] === type[0]) {
+      foundTemplate = templateName;
+    }
+  }); 
+  if (foundTemplate) return foundTemplate;
+  console.error("Could not find JSONXT template for the credential type " + type)
+}
+
 const main = async (ad) => {
     const demoVaccineCertificate = JSON.parse(await fs.promises.readFile(ad.credential, "utf-8"))
+
+    if (!ad.type) {
+      template = findTemplateType(jsonxtTemplate, demoVaccineCertificate.type);
+      ad.type = template.split(":")[0];
+      ad.version = template.split(":")[1];
+    }
 
     // This is the W3C VC enclosure
     const vc = {
@@ -116,21 +132,29 @@ const main = async (ad) => {
       credentialSubject: demoVaccineCertificate,
     }
 
-    console.log("Preparing to Sign: \n");
-    console.log(JSON.stringify(vc, null, 2))
-    console.log("");
+    console.log("  Preparing to Sign");
+    if (ad.verbose) {
+      console.log("");
+      console.log(JSON.stringify(vc, null, 2))
+      console.log("");
+    }
 
     // Signing and Generating QR
     signAndPack(vc, privateKey, ad.resolver, ad.type, ad.version, jsonxtTemplate).then(async uri => {
-      console.log(`Generated QR (${uri.length} bytes) is:\n`);
-      console.log(uri);
-      console.log("");
+      console.log(`  Generated QR (${uri.length} bytes)`);
+      if (ad.verbose) {
+        console.log("");
+        console.log(uri);
+        console.log("");
+      }
 
-      if (ad.url) {
-        await fs.promises.writeFile(ad.url, uri)
+      if (ad.uri) {
+        await fs.promises.writeFile(ad.uri, uri)
       }
       if (ad.vc) {
-        await fs.promises.writeFile(ad.vc, JSON.stringify(vc, null, 2))
+        unpack(uri, jsonxtTemplate).then(vc => {
+          fs.promises.writeFile(ad.vc, JSON.stringify(vc, null, 2))
+        });
       }
       if (ad.qrcode) {
         await qrcode.toFile(ad.qrcode, uri, {
@@ -140,9 +164,20 @@ const main = async (ad) => {
 
       // Unpacking QR and Verifying
       unpackAndVerify(uri, jsonxtTemplate).then(vc => {
-        console.log("Unpacked and verified to: \n");
-        console.log(JSON.stringify(vc, null, 2))
-        console.log("");
+        if (vc) {
+          console.log("  Unpacked and verified");
+          if (ad.verbose) {
+            console.log("");
+            console.log(JSON.stringify(vc, null, 2))
+            console.log("");
+          }
+        } else { 
+          unpack(uri, jsonxtTemplate).then(vc => {
+            console.log("  Unable to Verify: \n");
+            console.log(JSON.stringify(vc, null, 2))
+            console.log("");
+          });
+        }
       });
     });
 }

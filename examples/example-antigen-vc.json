@@ -13,7 +13,7 @@
   },
   "credentialSubject": {
     "type": [
-      "GoodHealthPass"
+      "GHPAntigenTestCredential"
     ],
     "recipient": {
       "type": [
@@ -24,15 +24,26 @@
       "familyName": "Dangerfield",
       "birthDate": "1972-10-17"
     },
-    "status": true
+    "disease": "RA01",
+    "testType": "LP6464-4",
+    "testCommercialName": "GLN-8800075500014/M22MD100M",
+    "testManufacturer": "GLN-8800075500014",
+    "testingCentre": "Joseph Walker Williams Community Center",
+    "dateOfSample": "2021-08-02T01:08:03Z",
+    "dateOfResult": "2021-08-02T01:08:02Z",
+    "testResult": "260415000",
+    "stateOfTest": "CA-AB",
+    "countryOfTest": "CA",
+    "certificateNumber": "URN:UVCI:01:US:10807843F94AEE0EE5093FBC254BD813#B",
+    "linkedTestCertificate": "PGR39264009"
   },
   "proof": {
     "type": "Ed25519Signature2020",
     "proofPurpose": "assertionMethod",
-    "created": "2021-09-10T21:25:52Z",
+    "created": "2021-09-10T21:25:51Z",
     "verificationMethod": "did:web:DEMO.COM:CONTROLLER#KEY",
-    "proofValue": "z3XH1nN27HRep9xkHCnhKD1tAPJJ1mG89W7gyNny3dWxRqerszXPDQB762qAwzGSjzDLDXGB6gFXvoNH4xg9VVoYe"
+    "proofValue": "zmLXAxDJYdjRiUp8jDktSYrz12YCa4PVAionP5YeciADpahnjb7prhmKUiGTDS5bp3h5k5DwCKhhzis6HXJkiUXr"
   },
-  "issuanceDate": "2021-09-10T21:25:52Z",
+  "issuanceDate": "2021-09-10T21:25:51Z",
   "issuer": "DID:WEB:DEMO.COM:CONTROLLER"
 }
