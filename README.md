@@ -1,10 +1,8 @@
-# The Good Health Pass Interoperability Blueprint<br>Paper Credentials Cookbook
+# The Good Health Pass Interoperability Blueprint - Paper Credentials Cookbook
 
-Version 0.9
-
-1 October 2021
-
-Status: DRAFT. 
+- Version 0.9
+- 1 October 2021
+- Status: DRAFT. 
 
 This publicly available guide was approved by the ToIP Foundation Steering Committee on [date of approval (dd month yyyy)].
 
