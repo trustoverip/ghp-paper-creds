@@ -1,4 +1,4 @@
-# The Good Health Pass Interoperability Blueprint –  Paper Credentials Cookbook
+# The Good Health Pass Interoperability Blueprint<br>Paper Credentials Cookbook
 
 Version 0.9
 
