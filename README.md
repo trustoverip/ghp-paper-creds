@@ -39,8 +39,7 @@ You should be familiar with the basic terminology used in Verifiable Credentials
 - Credential
 - Pass
 
-The full GHP Blueprint, including a guide to terminology can be found here: [https://www.goodhealthpass.org/blueprint](https://www.goodhealthpass.org/blueprint). If you just want to dive in and look and code, JSON and [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model/), go here: [https://github.com/trustoverip/ghp-paper-creds](https://github.com/trustoverip/ghp-paper-creds).
-
+The full GHP Blueprint, including a guide to terminology can be found [here](https://www.goodhealthpass.org/blueprint). If you just want to dive in and look and code, JSON and [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model/), go [here](https://github.com/trustoverip/ghp-paper-creds).
 
 # The Recipe
 
@@ -88,7 +87,7 @@ If you’re accepting proof documents and manually or digitally validating them 
 - **linkedVaccineCertificate** - Unique identifier of the associated vaccination certificate
 - **disease** - Disease or agent that the vaccination provides protection against
 - **vaccineDescription** - Generic description of the vaccine/prophylaxis
-- **vaccineType** - Generic description of the vaccine/prophylaxis or its component(s) [J07BX03 covid-19 vaccines]
+- **vaccineType** - Generic description of the vaccine/prophylaxis or its component(s)
 - **medicinalProductName** - Medicinal product name
 - **cvxCode** - CVX code (North America only)
 - **marketingAuthorizationHolder** - Marketing Authorisation Holder
@@ -270,7 +269,7 @@ See the Appendices for how to use the code to sign VCs: [https://github.com/trus
 }
 ``` 
 
-[https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json) - note that in this folder there are example Verifiable Credentials for all the GHP Credential Types.
+[https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json) - note that in this [folder](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/) there are example Verifiable Credentials for all the GHP Credential Types.
 
 ## 5. Encode VC as QR Code
 
