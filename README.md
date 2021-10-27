@@ -60,7 +60,7 @@ We suggest you keep these domains, paths and filenames as short as possible, as 
 
 There are four different data objects that can be created in GHP (Proof of Immunization, Recovery, Test; and a Pass), which need to be customized to your particular locale. The customization process is fairly straightforward and should not be time consuming.
 
-Expanded data definitions can be found here: [GHP COVID-19 Data Capture](https://drive.google.com/drive/u/0/folders/12rUFo7_EkjF-AcfRcghrtoGTN0iWgf-j). Example data definition can be found [https://github.com/trustoverip/ghp-paper-creds](https://github.com/trustoverip/ghp-paper-creds) and if you need further advice, please reach out to Paul Knowles at [paul.knowles@humancolossus.org](mailto:paul.knowles@humancolossus.org).
+Expanded data definitions can be found here: [GHP COVID-19 Data Capture](https://drive.google.com/drive/u/0/folders/12rUFo7_EkjF-AcfRcghrtoGTN0iWgf-j). Example data definition can be found [here](https://github.com/trustoverip/ghp-paper-creds) and if you need further advice, please reach out to [Paul Knowles]((mailto:paul.knowles@humancolossus.org)) at the Human Colossus.
 
 ### Common Fields to all Passes and Credentials
 
