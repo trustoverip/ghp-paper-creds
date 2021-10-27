@@ -239,11 +239,9 @@ The following sections are examples of the encoded data - this may vary slightly
 
 ## 4. Wrap Encoded Data in Signed Verifiable Credential
 
-See the Appendices for how to use the code to sign VCs ([https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js](https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js)).  
+See the Appendices for how to use the code to sign VCs: [https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js](https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js).  
 
 ### Example VC (Good Health Pass)
-
-[https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json) - note that in this folder there are example Verifiable Credentials for all the GHP Credential Types.
 
 ```json
 {
@@ -272,21 +270,25 @@ See the Appendices for how to use the code to sign VCs ([https://github.com/trus
 }
 ``` 
 
+[https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.json) - note that in this folder there are example Verifiable Credentials for all the GHP Credential Types.
+
 ## 5. Encode VC as QR Code
 
-See the Appendices for how to use the code to sign VCs ([https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js](https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js)).
+See the Appendices for how to use the [code](https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js) to sign VCs.
 
 ### Example JSON-XT QR Code (Good Health Pass)
 
-[https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.png](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.png) - note that in this folder there are example QR Codes for all the GHP Credential Types.
+![Tux, the Linux mascot](./examples/example-pass-vc.png)
+
+Note that in this [folder](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/) there are example QR Codes for all the GHP Credential Types.
 
 ### Example JSON-XT URL (Good Health Pass)
-
-[https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.txt](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/example-pass-vc.txt) - note that in this folder there are example JSON-XT URLs for all the GHP Credential Types.
 
 ```
 JXT:DEMO.COM:VAX:1:Rodney/Milburn/Dangerfield/26OJ A1GJ4E05//DID%3AWEB%3ADEMO.COM%3ACONTROLLER/*G$0DEMO.COM%3ACONTROLLER%23KEY/3U30D58G9XLEF2WELCM8R80L0VU6W3B5VLI34HTRDOLNJGW8RL6G26W6E86SRLOWNGE0HTXW1FYCPLG0RVDY74W78CQ27BEZKMRR9
 ```
+
+Note that in this [folder](https://github.com/trustoverip/ghp-paper-creds/blob/main/examples/) there are example JSON-XT URLs for all the GHP Credential Types.
 
 # Appendices
 
