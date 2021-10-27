@@ -132,7 +132,7 @@ If you’re accepting proof documents and manually or digitally validating them 
 
 When you have completed your data definition, it should look at the example in the Appendices - we’re not including it in the text here because of the size. Again, if you’re having trouble creating this, please get in touch with us and we can help you out.
 
-### Encode Data
+## 3. Encode Data
 
 The following sections are examples of the encoded data - this may vary slightly depending on your **@context** definition; these ones have been produced for Canada.
 
@@ -237,7 +237,7 @@ The following sections are examples of the encoded data - this may vary slightly
 }
 ```
 
-## 3. Wrap Encoded Data in Signed Verifiable Credential
+## 4. Wrap Encoded Data in Signed Verifiable Credential
 
 See the Appendices for how to use the code to sign VCs ([https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js](https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js)).  
 
@@ -272,7 +272,7 @@ See the Appendices for how to use the code to sign VCs ([https://github.com/trus
 }
 ``` 
 
-## 4. Encode VC as QR Code
+## 5. Encode VC as QR Code
 
 See the Appendices for how to use the code to sign VCs ([https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js](https://github.com/trustoverip/ghp-paper-creds/blob/main/demo/src/demo.js)).
 
