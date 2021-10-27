@@ -340,14 +340,12 @@ The work of the Foundation all takes place in Working Groups, within which there
 
 When you join ToIP, you are joining a community of individuals and organizations committed to solving the toughest technical and human centric problems of digital trust.  Your involvement will shape the future of how trust is managed across the Internet, in commerce, and throughout our digital lives. The benefits of joining our collaborative community are that together we can tackle issues that no single organization, governmental jurisdiction, or project ecosystem can solve by themselves. The results are lower costs for security, privacy, and compliance; dramatically improved customer experience, accelerated digital transformation, and simplified cross-system integration.
 
-To learn more about the Trust Over IP Foundation please visit our website, [https://trustoverip.org](https://trustoverip.org).
+To learn more about the Trust Over IP Foundation please visit our [website](https://trustoverip.org).
 
 ## Licensing Information
 
 The [working group name] at the Trust Over IP Foundation deliverables are published under the following licenses:
 
-Copyright mode: Attribution 4.0 International licenses: [http://creativecommons.org/licenses/by/4.0/legalcode](http://creativecommons.org/licenses/by/4.0/legalcode)
-
-Patent mode: W3C Mode (based on the W3C Patent Policy): [http://www.w3.org/Consortium/Patent-Policy-20040205](http://www.w3.org/Consortium/Patent-Policy-20040205)
-
-Source code: Apache 2.0.[http://www.apache.org/licenses/LICENSE-2.0.htm](http://www.apache.org/licenses/LICENSE-2.0.html)
+- Copyright mode: [Attribution 4.0 International licenses](http://creativecommons.org/licenses/by/4.0/legalcode)
+- Patent mode: [W3C Mode (based on the W3C Patent Policy)](http://www.w3.org/Consortium/Patent-Policy-20040205)
+- Source code: [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
